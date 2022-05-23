@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion />
+    <MyType>Windows</MyType>
+    <TargetFramework>net472</TargetFramework>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DefineTrace>True</DefineTrace>
+    <BuildDependsOn>$(BuildDependsOn);AfterBuildMigrated</BuildDependsOn>
+    <UseWindowsForms>True</UseWindowsForms>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>False</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugType>full</DebugType>
+    <DefineDebug>True</DefineDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+  </PropertyGroup>
+  <Target Name="BeforeBuildMigrated" BeforeTargets="PreBuildEvent" />
+  <Target Name="AfterBuildMigrated" />
+  <ItemGroup>
+    <PackageReference Include="UpgradeHelpers.DB.ADO" Version="9.0.1-rc0051" />
+    <PackageReference Include="UpgradeHelpers.DB.Essentials" Version="9.0.1-rc0051" />
+    <PackageReference Include="UpgradeHelpers.Utils" Version="9.0.1-rc0051" />
+    <PackageReference Include="UpgradeHelpers.DataGridViewCommon" Version="9.0.1-rc0051" />
+    <PackageReference Include="UpgradeHelpers.DataGridViewFlex" Version="9.0.1-rc0051" />
+    <PackageReference Include="UpgradeHelpers.Gui" Version="9.0.1-rc0051" />
+    <PackageReference Include="UpgradeHelpers.Gui.ContainerHelper" Version="9.0.1-rc0051" />
+    <PackageReference Include="UpgradeHelpers.Gui.Graphics" Version="9.0.1-rc0051" />
+    <PackageReference Include="UpgradeHelpers.SupportHelper" Version="9.0.1-rc0051" />
+    <PackageReference Include="UpgradeHelpers.Utils.ReflectionHelper" Version="9.0.1-rc0051" />
+    <PackageReference Include="UpgradeHelpers.VB" Version="9.0.1-rc0051" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSXML2">
+      <Guid>{F5078F18-C551-11D3-89B9-0000F81FE221}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="Scripting">
+      <Guid>{420B2830-E718-11CF-893D-00A0C9054228}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
+    <Reference Include="MSDATASRC" />
+    <COMReference Include="Microsoft.StdFormat">
+      <Guid>{6B263850-900B-11D0-9484-00A0C91110ED}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="*_UpgradeReport.htm" />
+    <None Remove="*_status.xml" />
+    <None Remove="*.migrationstatus" />
+    <None Remove="TailwindPOSSupport.log" />
+    <None Remove="_UpgradeReport_Files\**" />
+    <Compile Remove="_UpgradeReport_Files\**" />
+    <EmbeddedResource Remove="_UpgradeReport_Files\**" />
+    <None Remove="TailwindPOSSupport\**" />
+    <Compile Remove="TailwindPOSSupport\**" />
+    <EmbeddedResource Remove="TailwindPOSSupport\**" />
+    <None Remove="packages\**" />
+    <Compile Remove="packages\**" />
+    <EmbeddedResource Remove="packages\**" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,43 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 16
+Project("{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}") = "TailwindPOS", "TailwindPOS.csproj", "{B1B47E6F-8074-49FB-8534-63546C5D55D6}"
+EndProject
+Project("{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}") = "TailwindPOSSupport", "TailwindPOSSupport\TailwindPOSSupport.csproj", "{D07BF2D4-CE33-44E0-9A5E-2EF80BC2A34C}"
+EndProject
+Project("{2150E333-8FDC-42a3-9474-1A3956D46DE8}") = "TailwindPOS.csproj", "TailwindPOS.csproj", "{9F6CE0D3-002E-4A69-88F4-23AD29B7AB34}"
+EndProject
+Project("{2150E333-8FDC-42a3-9474-1A3956D46DE8}") = "TailwindPOSSupport", "TailwindPOSSupport", "{30BDB22B-8FC3-48A1-90D4-3E1386762664}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Any CPU = Debug|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1B47E6F-8074-49FB-8534-63546C5D55D6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B1B47E6F-8074-49FB-8534-63546C5D55D6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B1B47E6F-8074-49FB-8534-63546C5D55D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B47E6F-8074-49FB-8534-63546C5D55D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B47E6F-8074-49FB-8534-63546C5D55D6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B1B47E6F-8074-49FB-8534-63546C5D55D6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B1B47E6F-8074-49FB-8534-63546C5D55D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B47E6F-8074-49FB-8534-63546C5D55D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D07BF2D4-CE33-44E0-9A5E-2EF80BC2A34C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D07BF2D4-CE33-44E0-9A5E-2EF80BC2A34C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D07BF2D4-CE33-44E0-9A5E-2EF80BC2A34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D07BF2D4-CE33-44E0-9A5E-2EF80BC2A34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D07BF2D4-CE33-44E0-9A5E-2EF80BC2A34C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D07BF2D4-CE33-44E0-9A5E-2EF80BC2A34C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D07BF2D4-CE33-44E0-9A5E-2EF80BC2A34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D07BF2D4-CE33-44E0-9A5E-2EF80BC2A34C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1B47E6F-8074-49FB-8534-63546C5D55D6} = {9F6CE0D3-002E-4A69-88F4-23AD29B7AB34}
+		{D07BF2D4-CE33-44E0-9A5E-2EF80BC2A34C} = {30BDB22B-8FC3-48A1-90D4-3E1386762664}
+	EndGlobalSection
+EndGlobal

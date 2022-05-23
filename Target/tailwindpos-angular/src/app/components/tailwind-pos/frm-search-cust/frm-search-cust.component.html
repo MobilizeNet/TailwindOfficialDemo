@@ -1,0 +1,11 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmSearchCust" class="TailwindPOS_frmSearchCust">
+        <ng-template let-model>
+            <div class="frmSearchCust">
+                <wm-datagridviewflex #fgCustomers id="fgCustomers" [model]="model.fgCustomers" class="fgCustomers" tabindex="2"></wm-datagridviewflex>
+                <wm-button #cbClose id="cbClose" [model]="model.cbClose" class="cbClose" tabindex="3"></wm-button>
+                <tailwind-pos-uc-letters-pad #ucLettersPad id="ucLettersPad" [model]="model.ucLettersPad" class="ucLettersPad" tabindex="1"></tailwind-pos-uc-letters-pad>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>
