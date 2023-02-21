@@ -488,7 +488,7 @@ namespace TailwindPOS
 			string tempRefParam7 = "Pos";
 			string tempRefParam8 = ".\\TailwindPOS.ini";
 			PRESET_TERMINALID = Convert.ToInt32(Double.Parse(Config.ReadConfigSetting(ref tempRefParam7, "POSTerminal", ref tempRefParam8)));
-		}
+        }
 
 		internal static void RegisterBreakEnd(int POSID, int ShiftID, int BreakId, ref System.DateTime EndTime)
 		{
