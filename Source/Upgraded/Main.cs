@@ -1,10 +1,12 @@
 using Microsoft.VisualBasic;
 using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Data;
 using System.Data.Common;
 using System.Globalization;
 using System.Windows.Forms;
+using System.Xml;
 using UpgradeHelpers.DB.ADO;
 using UpgradeHelpers.Helpers;
 
@@ -240,29 +242,22 @@ namespace TailwindPOS
 			conn.Close();
 		}
 
-		internal static string ExtractData(string property, string json, bool isnumber)
+		internal static string ExtractData(string property, string json, int  id)
 		{
 			string result = "";
-			int endindex = 0;
-			// we search inside the json string for "property": "value"
-			int startindex = (json.IndexOf("\"" + property + "\":") + 1);
-			if (startindex > -1)
+			XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.LoadXml(json);
+
+			var itemNodes = xmlDoc.SelectNodes("//products//products");
+
+			if (property=="name")
 			{
-				startindex = startindex + Strings.Len(property) + 3;
-				if (isnumber)
-				{
-					endindex = Strings.InStr(startindex, json, ",", CompareMethod.Binary);
-				}
-				else
-				{
-					endindex = Strings.InStr(startindex, json, "\",", CompareMethod.Binary);
-					// this is to skip the double quote
-					startindex++;
-				}
-				if (endindex > -1)
-				{
-					result = json.Substring(startindex - 1, Math.Min(endindex - startindex, json.Length - (startindex - 1)));
-				}
+				// Get the inner text of the element
+				result = itemNodes.Item(id-1).ChildNodes[1].InnerText;
+			}
+			else
+			{
+				result = itemNodes.Item(id-1).ChildNodes[2].InnerText;
 			}
 			return result;
 		}
@@ -315,8 +310,8 @@ namespace TailwindPOS
 
 
 				response = xmlhttp.responseText;
-				ProductDescription = ExtractData("name", xmlhttp.responseText, false);
-				ProductPrice = Decimal.Parse(ExtractData("price", xmlhttp.responseText, true), NumberStyles.Currency | NumberStyles.AllowExponent);
+				ProductDescription = ExtractData("name", xmlhttp.responseText, Int32.Parse(productCode));
+				ProductPrice = Decimal.Parse(ExtractData("price", xmlhttp.responseText, Int32.Parse(productCode)), NumberStyles.Currency )+ 0.0m;
 				result = true;
 			}
 			else
@@ -488,7 +483,7 @@ namespace TailwindPOS
 			string tempRefParam7 = "Pos";
 			string tempRefParam8 = ".\\TailwindPOS.ini";
 			PRESET_TERMINALID = Convert.ToInt32(Double.Parse(Config.ReadConfigSetting(ref tempRefParam7, "POSTerminal", ref tempRefParam8)));
-        }
+		}
 
 		internal static void RegisterBreakEnd(int POSID, int ShiftID, int BreakId, ref System.DateTime EndTime)
 		{
