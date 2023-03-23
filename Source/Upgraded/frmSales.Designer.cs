@@ -14,7 +14,7 @@ namespace TailwindPOS
 				if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
 				{
 					m_InitializingDefInstance = true;
-					m_vb6FormDefInstance = CreateInstance();
+					m_vb6FormDefInstance = new frmSales();
 					m_InitializingDefInstance = false;
 				}
 				return m_vb6FormDefInstance;
@@ -27,12 +27,6 @@ namespace TailwindPOS
 
 		#endregion
 		#region "Windows Form Designer generated code "
-		public static frmSales CreateInstance()
-		{
-			frmSales theInstance = new frmSales();
-			theInstance.Form_Load();
-			return theInstance;
-		}
 		private string[] visualControls = new string[]{"components", "ToolTipMain", "cbRePrint", "ucNumericKeyPad", "cbQuantity", "fgItems", "lblCustomerInfo", "gbCustomerInfo", "cbBreak", "cbLogOff", "cbVoidTransaction", "cbVoidItem", "cbAddCustomer", "cbCustomerSearch", "cbPayment", "lblTotal", "lblTax", "lblSubTotal", "lblTotalTitle", "lblTaxTitle", "lblSubTotalTitle", "frSubTotals", "picLogo", "lblPOS", "lblPOSTitle", "lblCashier", "lblCashierTitle", "commandButtonHelper1"};
 		//Required by the Windows Form Designer
 		private System.ComponentModel.IContainer components;
@@ -62,7 +56,7 @@ namespace TailwindPOS
 		public System.Windows.Forms.Label lblPOSTitle;
 		public System.Windows.Forms.Label lblCashier;
 		public System.Windows.Forms.Label lblCashierTitle;
-		public UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1;
+		public UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1;
 		//NOTE: The following procedure is required by the Windows Form Designer
 		//It can be modified using the Windows Form Designer.
 		//Do not modify it using the code editor.
@@ -100,7 +94,8 @@ namespace TailwindPOS
 			this.gbCustomerInfo.SuspendLayout();
 			this.frSubTotals.SuspendLayout();
 			this.SuspendLayout();
-			this.commandButtonHelper1 = new UpgradeHelpers.Gui.CommandButtonHelper(this.components);
+			this.commandButtonHelper1 = new UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
+			((System.ComponentModel.ISupportInitialize) this.fgItems).BeginInit();
 			// 
 			// cbRePrint
 			// 
@@ -154,6 +149,7 @@ namespace TailwindPOS
 			this.fgItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 			this.fgItems.ColumnsCount = 6;
 			this.fgItems.FixedColumns = 0;
+			this.fgItems.FixedRows = 1;
 			this.fgItems.FocusRect = UpgradeHelpers.FocusRectSettings.FocusNone;
 			this.fgItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.fgItems.Location = new System.Drawing.Point(8, 8);
@@ -295,6 +291,7 @@ namespace TailwindPOS
 			// 
 			this.cbPayment.AllowDrop = true;
 			this.cbPayment.BackColor = System.Drawing.Color.FromArgb(0, 192, 0);
+			this.cbPayment.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cbPayment.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cbPayment.Location = new System.Drawing.Point(360, 688);
 			this.cbPayment.Name = "cbPayment";
@@ -346,6 +343,7 @@ namespace TailwindPOS
 			this.lblTax.AllowDrop = true;
 			this.lblTax.BackColor = System.Drawing.Color.White;
 			this.lblTax.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblTax.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblTax.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblTax.Location = new System.Drawing.Point(168, 80);
 			this.lblTax.Name = "lblTax";
@@ -360,6 +358,7 @@ namespace TailwindPOS
 			this.lblSubTotal.AllowDrop = true;
 			this.lblSubTotal.BackColor = System.Drawing.Color.White;
 			this.lblSubTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblSubTotal.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblSubTotal.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblSubTotal.Location = new System.Drawing.Point(168, 32);
 			this.lblSubTotal.Name = "lblSubTotal";
@@ -388,6 +387,7 @@ namespace TailwindPOS
 			this.lblTaxTitle.AllowDrop = true;
 			this.lblTaxTitle.BackColor = System.Drawing.Color.White;
 			this.lblTaxTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblTaxTitle.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblTaxTitle.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblTaxTitle.Location = new System.Drawing.Point(16, 80);
 			this.lblTaxTitle.Name = "lblTaxTitle";
@@ -401,6 +401,7 @@ namespace TailwindPOS
 			this.lblSubTotalTitle.AllowDrop = true;
 			this.lblSubTotalTitle.BackColor = System.Drawing.Color.White;
 			this.lblSubTotalTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblSubTotalTitle.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblSubTotalTitle.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblSubTotalTitle.Location = new System.Drawing.Point(16, 32);
 			this.lblSubTotalTitle.Name = "lblSubTotalTitle";
@@ -432,6 +433,7 @@ namespace TailwindPOS
 			this.lblPOS.AllowDrop = true;
 			this.lblPOS.BackColor = System.Drawing.Color.White;
 			this.lblPOS.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblPOS.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblPOS.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblPOS.Location = new System.Drawing.Point(752, 768);
 			this.lblPOS.Name = "lblPOS";
@@ -445,6 +447,7 @@ namespace TailwindPOS
 			this.lblPOSTitle.AllowDrop = true;
 			this.lblPOSTitle.BackColor = System.Drawing.Color.White;
 			this.lblPOSTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblPOSTitle.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblPOSTitle.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblPOSTitle.Location = new System.Drawing.Point(752, 704);
 			this.lblPOSTitle.Name = "lblPOSTitle";
@@ -458,6 +461,7 @@ namespace TailwindPOS
 			this.lblCashier.AllowDrop = true;
 			this.lblCashier.BackColor = System.Drawing.Color.White;
 			this.lblCashier.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblCashier.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblCashier.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblCashier.Location = new System.Drawing.Point(960, 632);
 			this.lblCashier.Name = "lblCashier";
@@ -471,6 +475,7 @@ namespace TailwindPOS
 			this.lblCashierTitle.AllowDrop = true;
 			this.lblCashierTitle.BackColor = System.Drawing.Color.White;
 			this.lblCashierTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblCashierTitle.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblCashierTitle.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblCashierTitle.Location = new System.Drawing.Point(752, 632);
 			this.lblCashierTitle.Name = "lblCashierTitle";
@@ -482,7 +487,7 @@ namespace TailwindPOS
 			// frmSales
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(18, 35);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(16, 32);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(1202, 909);
@@ -526,6 +531,8 @@ namespace TailwindPOS
 			this.commandButtonHelper1.SetStyle(this.cbPayment, 1);
 			this.Activated += new System.EventHandler(this.frmSales_Activated);
 			this.Closed += new System.EventHandler(this.Form_Closed);
+			this.Load += new System.EventHandler(this.Form_Load);
+			((System.ComponentModel.ISupportInitialize) this.fgItems).EndInit();
 			this.gbCustomerInfo.ResumeLayout(false);
 			this.frSubTotals.ResumeLayout(false);
 			this.ResumeLayout(false);

@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
 using System;
 
-namespace TailwindPOSSupport.PInvoke.UnsafeNative
+namespace Tailwind_WinFormsSupport.PInvoke.UnsafeNative
 {
 	[System.Security.SuppressUnmanagedCodeSecurity]
 	public static class kernel32

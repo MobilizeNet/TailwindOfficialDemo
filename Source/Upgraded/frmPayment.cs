@@ -41,9 +41,9 @@ namespace TailwindPOS
 
 		private void frmPayment_Activated(System.Object eventSender, System.EventArgs eventArgs)
 		{
-			if (UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+			if (UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm != eventSender)
 			{
-				UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (System.Windows.Forms.Form) eventSender;
+				UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm = (System.Windows.Forms.Form) eventSender;
 			}
 		}
 		decimal m_transactionAmount = 0;
@@ -135,7 +135,7 @@ namespace TailwindPOS
 
 		private void cbGiftCard_Click(Object eventSender, EventArgs eventArgs)
 		{
-			frmGiftCardCode giftCard = frmGiftCardCode.CreateInstance();
+			frmGiftCardCode giftCard = new frmGiftCardCode();
 			giftCard.ShowDialog();
 			if (giftCard.Code != "")
 			{
@@ -149,8 +149,8 @@ namespace TailwindPOS
 			this.Hide();
 		}
 
-		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-		private void Form_Load()
+		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load event and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
+		private void Form_Load(Object eventSender, EventArgs eventArgs)
 		{
 			gbPayments.Visible = true;
 			ucNumbers.ShowChars = true;

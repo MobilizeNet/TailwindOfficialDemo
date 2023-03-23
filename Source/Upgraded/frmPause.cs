@@ -39,9 +39,9 @@ namespace TailwindPOS
 
 		private void frmPause_Activated(System.Object eventSender, System.EventArgs eventArgs)
 		{
-			if (UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+			if (UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm != eventSender)
 			{
-				UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (System.Windows.Forms.Form) eventSender;
+				UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm = (System.Windows.Forms.Form) eventSender;
 			}
 		}
 		int m_BreakId = 0;
@@ -58,7 +58,7 @@ namespace TailwindPOS
 				Total = 0;
 				while (Total < 300)
 				{
-					cash = frmCashCount.CreateInstance();
+					cash = new frmCashCount();
 					cash.ShowDialog();
 					Total = cash.Total;
 					// Validate that the POS has enough cash on Drawer to
@@ -86,8 +86,8 @@ namespace TailwindPOS
 			}
 		}
 
-		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-		private void Form_Load()
+		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load event and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
+		private void Form_Load(Object eventSender, EventArgs eventArgs)
 		{
 			int CurrentUserID = 0;
 			m_BreakId = 0;

@@ -14,7 +14,7 @@ namespace TailwindPOS
 				if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
 				{
 					m_InitializingDefInstance = true;
-					m_vb6FormDefInstance = CreateInstance();
+					m_vb6FormDefInstance = new frmSearchCust();
 					m_InitializingDefInstance = false;
 				}
 				return m_vb6FormDefInstance;
@@ -27,12 +27,6 @@ namespace TailwindPOS
 
 		#endregion
 		#region "Windows Form Designer generated code "
-		public static frmSearchCust CreateInstance()
-		{
-			frmSearchCust theInstance = new frmSearchCust();
-			theInstance.Form_Load();
-			return theInstance;
-		}
 		private string[] visualControls = new string[]{"components", "ToolTipMain", "ucLettersPad", "cbClose", "fgCustomers", "commandButtonHelper1"};
 		//Required by the Windows Form Designer
 		private System.ComponentModel.IContainer components;
@@ -40,7 +34,7 @@ namespace TailwindPOS
 		public ucLettersPad ucLettersPad;
 		public System.Windows.Forms.Button cbClose;
 		public UpgradeHelpers.DataGridViewFlex fgCustomers;
-		public UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1;
+		public UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1;
 		//NOTE: The following procedure is required by the Windows Form Designer
 		//It can be modified using the Windows Form Designer.
 		//Do not modify it using the code editor.
@@ -54,7 +48,8 @@ namespace TailwindPOS
 			this.cbClose = new System.Windows.Forms.Button();
 			this.fgCustomers = new UpgradeHelpers.DataGridViewFlex(this.components);
 			this.SuspendLayout();
-			this.commandButtonHelper1 = new UpgradeHelpers.Gui.CommandButtonHelper(this.components);
+			this.commandButtonHelper1 = new UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
+			((System.ComponentModel.ISupportInitialize) this.fgCustomers).BeginInit();
 			// 
 			// ucLettersPad
 			// 
@@ -91,11 +86,13 @@ namespace TailwindPOS
 			this.fgCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 			this.fgCustomers.ColumnsCount = 5;
 			this.fgCustomers.FixedColumns = 0;
+			this.fgCustomers.FixedRows = 1;
 			this.fgCustomers.FocusRect = UpgradeHelpers.FocusRectSettings.FocusNone;
 			this.fgCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.fgCustomers.Location = new System.Drawing.Point(648, 24);
 			this.fgCustomers.Name = "fgCustomers";
 			this.fgCustomers.ReadOnly = true;
+			this.fgCustomers.RowsCount = 2;
 			this.fgCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.fgCustomers.ShowCellToolTips = false;
 			this.fgCustomers.Size = new System.Drawing.Size(849, 577);
@@ -106,7 +103,7 @@ namespace TailwindPOS
 			// frmSearchCust
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(18, 35);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(16, 31);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(1264, 737);
@@ -124,6 +121,8 @@ namespace TailwindPOS
 			this.commandButtonHelper1.SetStyle(this.cbClose, 1);
 			this.Activated += new System.EventHandler(this.frmSearchCust_Activated);
 			this.Closed += new System.EventHandler(this.Form_Closed);
+			this.Load += new System.EventHandler(this.Form_Load);
+			((System.ComponentModel.ISupportInitialize) this.fgCustomers).EndInit();
 			this.ResumeLayout(false);
 		}
 		#endregion

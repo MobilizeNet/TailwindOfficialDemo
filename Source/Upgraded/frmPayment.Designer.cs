@@ -14,7 +14,7 @@ namespace TailwindPOS
 				if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
 				{
 					m_InitializingDefInstance = true;
-					m_vb6FormDefInstance = CreateInstance();
+					m_vb6FormDefInstance = new frmPayment();
 					m_InitializingDefInstance = false;
 				}
 				return m_vb6FormDefInstance;
@@ -27,12 +27,6 @@ namespace TailwindPOS
 
 		#endregion
 		#region "Windows Form Designer generated code "
-		public static frmPayment CreateInstance()
-		{
-			frmPayment theInstance = new frmPayment();
-			theInstance.Form_Load();
-			return theInstance;
-		}
 		private string[] visualControls = new string[]{"components", "ToolTipMain", "cbCash", "cbCreditCard", "cbCheck", "cbGiftCard", "ucNumbers", "gbPayments", "cbFinishPayment", "fgPayments", "cb_Cancel", "lblPaymentReady", "lblChange", "lblChangeTitle", "lblPaidSoFarTitle", "lblRemaining", "lblRemaingTitle", "commandButtonHelper1"};
 		//Required by the Windows Form Designer
 		private System.ComponentModel.IContainer components;
@@ -52,7 +46,7 @@ namespace TailwindPOS
 		public System.Windows.Forms.Label lblPaidSoFarTitle;
 		public System.Windows.Forms.Label lblRemaining;
 		public System.Windows.Forms.Label lblRemaingTitle;
-		public UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1;
+		public UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1;
 		//NOTE: The following procedure is required by the Windows Form Designer
 		//It can be modified using the Windows Form Designer.
 		//Do not modify it using the code editor.
@@ -79,7 +73,8 @@ namespace TailwindPOS
 			this.lblRemaingTitle = new System.Windows.Forms.Label();
 			this.gbPayments.SuspendLayout();
 			this.SuspendLayout();
-			this.commandButtonHelper1 = new UpgradeHelpers.Gui.CommandButtonHelper(this.components);
+			this.commandButtonHelper1 = new UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
+			((System.ComponentModel.ISupportInitialize) this.fgPayments).BeginInit();
 			// 
 			// gbPayments
 			// 
@@ -105,6 +100,7 @@ namespace TailwindPOS
 			// 
 			this.cbCash.AllowDrop = true;
 			this.cbCash.BackColor = System.Drawing.Color.White;
+			this.cbCash.Font = new System.Drawing.Font("Brandon Grotesque Light", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cbCash.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cbCash.Location = new System.Drawing.Point(368, 56);
 			this.cbCash.Name = "cbCash";
@@ -120,6 +116,7 @@ namespace TailwindPOS
 			// 
 			this.cbCreditCard.AllowDrop = true;
 			this.cbCreditCard.BackColor = System.Drawing.Color.White;
+			this.cbCreditCard.Font = new System.Drawing.Font("Brandon Grotesque Light", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cbCreditCard.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cbCreditCard.Location = new System.Drawing.Point(368, 144);
 			this.cbCreditCard.Name = "cbCreditCard";
@@ -135,6 +132,7 @@ namespace TailwindPOS
 			// 
 			this.cbCheck.AllowDrop = true;
 			this.cbCheck.BackColor = System.Drawing.Color.White;
+			this.cbCheck.Font = new System.Drawing.Font("Brandon Grotesque Light", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cbCheck.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cbCheck.Location = new System.Drawing.Point(368, 232);
 			this.cbCheck.Name = "cbCheck";
@@ -150,6 +148,7 @@ namespace TailwindPOS
 			// 
 			this.cbGiftCard.AllowDrop = true;
 			this.cbGiftCard.BackColor = System.Drawing.Color.White;
+			this.cbGiftCard.Font = new System.Drawing.Font("Brandon Grotesque Light", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cbGiftCard.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cbGiftCard.Location = new System.Drawing.Point(368, 320);
 			this.cbGiftCard.Name = "cbGiftCard";
@@ -173,6 +172,7 @@ namespace TailwindPOS
 			// 
 			this.cbFinishPayment.AllowDrop = true;
 			this.cbFinishPayment.BackColor = System.Drawing.Color.FromArgb(97, 44, 67);
+			this.cbFinishPayment.Font = new System.Drawing.Font("Brandon Grotesque Light", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cbFinishPayment.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cbFinishPayment.Location = new System.Drawing.Point(624, 568);
 			this.cbFinishPayment.Name = "cbFinishPayment";
@@ -194,6 +194,8 @@ namespace TailwindPOS
 			this.fgPayments.BackgroundColor = System.Drawing.Color.White;
 			this.fgPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 			this.fgPayments.ColumnsCount = 3;
+			this.fgPayments.FixedColumns = 1;
+			this.fgPayments.FixedRows = 1;
 			this.fgPayments.Font = new System.Drawing.Font("Brandon Grotesque Light", 14.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.fgPayments.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.fgPayments.Location = new System.Drawing.Point(816, 256);
@@ -210,6 +212,7 @@ namespace TailwindPOS
 			// 
 			this.cb_Cancel.AllowDrop = true;
 			this.cb_Cancel.BackColor = System.Drawing.Color.White;
+			this.cb_Cancel.Font = new System.Drawing.Font("Brandon Grotesque Light", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cb_Cancel.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cb_Cancel.Location = new System.Drawing.Point(928, 568);
 			this.cb_Cancel.Name = "cb_Cancel";
@@ -241,6 +244,7 @@ namespace TailwindPOS
 			this.lblChange.AllowDrop = true;
 			this.lblChange.BackColor = System.Drawing.Color.White;
 			this.lblChange.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblChange.Font = new System.Drawing.Font("Brandon Grotesque Light", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblChange.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblChange.Location = new System.Drawing.Point(832, 152);
 			this.lblChange.Name = "lblChange";
@@ -285,6 +289,7 @@ namespace TailwindPOS
 			this.lblRemaining.AllowDrop = true;
 			this.lblRemaining.BackColor = System.Drawing.Color.White;
 			this.lblRemaining.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblRemaining.Font = new System.Drawing.Font("Brandon Grotesque Light", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblRemaining.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblRemaining.Location = new System.Drawing.Point(832, 56);
 			this.lblRemaining.Name = "lblRemaining";
@@ -312,7 +317,7 @@ namespace TailwindPOS
 			// frmPayment
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(18, 35);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(16, 30);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(1219, 659);
@@ -342,6 +347,8 @@ namespace TailwindPOS
 			this.commandButtonHelper1.SetStyle(this.cb_Cancel, 1);
 			this.Activated += new System.EventHandler(this.frmPayment_Activated);
 			this.Closed += new System.EventHandler(this.Form_Closed);
+			this.Load += new System.EventHandler(this.Form_Load);
+			((System.ComponentModel.ISupportInitialize) this.fgPayments).EndInit();
 			this.gbPayments.ResumeLayout(false);
 			this.ResumeLayout(false);
 		}

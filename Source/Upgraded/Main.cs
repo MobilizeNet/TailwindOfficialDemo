@@ -1,12 +1,9 @@
-using Microsoft.VisualBasic;
 using System;
-using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Data;
 using System.Data.Common;
 using System.Globalization;
 using System.Windows.Forms;
-using System.Xml;
 using UpgradeHelpers.DB.ADO;
 using UpgradeHelpers.Helpers;
 
@@ -242,24 +239,42 @@ namespace TailwindPOS
 			conn.Close();
 		}
 
-		internal static string ExtractData(string property, string json, int  id)
+		//We search the Name or Price of each element
+		internal static string ExtractData(string element, MSXML2.DOMDocument60 xml, string id)
 		{
-			string result = "";
-			XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.LoadXml(json);
-
-			var itemNodes = xmlDoc.SelectNodes("//products//products");
-
-			if (property=="name")
+			MSXML2.IXMLDOMNodeList nodeList = xml.selectNodes("/products/products");
+			MSXML2.IXMLDOMNode node = null;
+			string value = "";
+			MSXML2.IXMLDOMNodeList childList = null;
+			MSXML2.IXMLDOMNode child = null;
+			int childID = 0;
+			if (nodeList != null)
 			{
-				// Get the inner text of the element
-				result = itemNodes.Item(id-1).ChildNodes[1].InnerText;
+				foreach (MSXML2.IXMLDOMNode nodeIterator in nodeList)
+				{
+					node = nodeIterator;
+					childList = node.childNodes;
+					childID = Convert.ToInt32(Double.Parse(node.firstChild.firstChild.text));
+					foreach (MSXML2.IXMLDOMNode childIterator in childList)
+					{
+						child = childIterator;
+						if (childID < Convert.ToInt32(Double.Parse(id)))
+						{
+							break;
+						}
+						if (childID == Convert.ToInt32(Double.Parse(id)) && child.nodeName == element)
+						{
+							value = child.text;
+							return value;
+						}
+						//child
+						child = default(MSXML2.IXMLDOMNode);
+					}
+					//node
+					node = default(MSXML2.IXMLDOMNode);
+				}
 			}
-			else
-			{
-				result = itemNodes.Item(id-1).ChildNodes[2].InnerText;
-			}
-			return result;
+			return "";
 		}
 
 		internal static ADORecordSetHelper FindCustomers(string customerInfo)
@@ -301,17 +316,24 @@ namespace TailwindPOS
 			//The next line must be added in the funtions where the backend is used.
 			xmlhttp.setOption(MSXML2.SERVERXMLHTTP_OPTION.SXH_OPTION_IGNORE_SERVER_SSL_CERT_ERROR_FLAGS, SXH_SERVER_CERT_IGNORE_ALL_SERVER_ERRORS);
 
-			xmlhttp.open("GET", URL_PRODUCT_API + productCode, false, Type.Missing, Type.Missing);
+			xmlhttp.open("GET", URL_PRODUCT_API, false, Type.Missing, Type.Missing);
 			xmlhttp.send(Type.Missing);
-			string response = "";
+			MSXML2.DOMDocument60 response = null;
 			// was the response ok
 			if (xmlhttp.status == 200)
 			{
 
+				response = (MSXML2.DOMDocument60) xmlhttp.responseXML;
+				ProductDescription = ExtractData("name", response, productCode);
 
-				response = xmlhttp.responseText;
-				ProductDescription = ExtractData("name", xmlhttp.responseText, Int32.Parse(productCode));
-				ProductPrice = Decimal.Parse(ExtractData("price", xmlhttp.responseText, Int32.Parse(productCode)), NumberStyles.Currency )+ 0.0m;
+				if (ProductDescription == "")
+				{
+					result = false;
+					MessageBox.Show("Product not found", AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()));
+					return result;
+				}
+
+				ProductPrice = Decimal.Parse(ExtractData("price", response, productCode), NumberStyles.Currency | NumberStyles.AllowExponent);
 				result = true;
 			}
 			else
@@ -400,7 +422,7 @@ namespace TailwindPOS
 			return strOut;
 		}
 
-		//UPGRADE_WARNING: (1047) Application will terminate when Sub Main() finishes. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1047
+		//UPGRADE_WARNING: (1047) Application will terminate when Sub Main() finishes. More Information: https://docs.mobilize.net/vbuc/ewis#1047
 		[STAThread]
 		public static void Main()
 		{
@@ -436,7 +458,7 @@ namespace TailwindPOS
 			DbConnection conn = UpgradeHelpers.DB.AdoFactoryManager.GetFactory().CreateConnection();
 			conn.ConnectionString = ConnectionString;
 			//conn.CursorLocation = adUseClient 'This is not supported by VBUC Conversion tool, but it doesn't affect the migrated result
-			//UPGRADE_TODO: (7010) The connection string must be verified to fullfill the .NET data provider connection string requirements. More Information: https://www.mobilize.net/vbtonet/ewis/ewi7010
+			//UPGRADE_TODO: (7010) The connection string must be verified to fullfill the .NET data provider connection string requirements. More Information: https://docs.mobilize.net/vbuc/ewis#7010
 			conn.Open();
 			return conn;
 		}

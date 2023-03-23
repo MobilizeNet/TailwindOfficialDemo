@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
 using System;
 
-namespace TailwindPOSSupport.PInvoke.SafeNative
+namespace Tailwind_WinFormsSupport.PInvoke.SafeNative
 {
 	public static class kernel32
 	{
@@ -12,7 +12,7 @@ namespace TailwindPOSSupport.PInvoke.SafeNative
 			IntPtr tmpPtr = Marshal.StringToHGlobalAnsi(lpKeyName);
 			try
 			{
-				result = TailwindPOSSupport.PInvoke.UnsafeNative.kernel32.GetPrivateProfileString(ref lpApplicationName, tmpPtr, ref lpDefault, ref lpReturnedString, nSize, ref lpFileName);
+				result = Tailwind_WinFormsSupport.PInvoke.UnsafeNative.kernel32.GetPrivateProfileString(ref lpApplicationName, tmpPtr, ref lpDefault, ref lpReturnedString, nSize, ref lpFileName);
 				lpKeyName = Marshal.PtrToStringAnsi(tmpPtr);
 			}
 			finally

@@ -14,7 +14,7 @@ namespace TailwindPOS
 				if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
 				{
 					m_InitializingDefInstance = true;
-					m_vb6FormDefInstance = CreateInstance();
+					m_vb6FormDefInstance = new frmPause();
 					m_InitializingDefInstance = false;
 				}
 				return m_vb6FormDefInstance;
@@ -27,19 +27,13 @@ namespace TailwindPOS
 
 		#endregion
 		#region "Windows Form Designer generated code "
-		public static frmPause CreateInstance()
-		{
-			frmPause theInstance = new frmPause();
-			theInstance.Form_Load();
-			return theInstance;
-		}
 		private string[] visualControls = new string[]{"components", "ToolTipMain", "cbReturn", "lblPauseMessage", "commandButtonHelper1"};
 		//Required by the Windows Form Designer
 		private System.ComponentModel.IContainer components;
 		public System.Windows.Forms.ToolTip ToolTipMain;
 		public System.Windows.Forms.Button cbReturn;
 		public System.Windows.Forms.Label lblPauseMessage;
-		public UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1;
+		public UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1;
 		//NOTE: The following procedure is required by the Windows Form Designer
 		//It can be modified using the Windows Form Designer.
 		//Do not modify it using the code editor.
@@ -52,12 +46,13 @@ namespace TailwindPOS
 			this.cbReturn = new System.Windows.Forms.Button();
 			this.lblPauseMessage = new System.Windows.Forms.Label();
 			this.SuspendLayout();
-			this.commandButtonHelper1 = new UpgradeHelpers.Gui.CommandButtonHelper(this.components);
+			this.commandButtonHelper1 = new UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
 			// 
 			// cbReturn
 			// 
 			this.cbReturn.AllowDrop = true;
 			this.cbReturn.BackColor = System.Drawing.Color.FromArgb(97, 44, 67);
+			this.cbReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cbReturn.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cbReturn.Location = new System.Drawing.Point(224, 160);
 			this.cbReturn.Name = "cbReturn";
@@ -74,6 +69,7 @@ namespace TailwindPOS
 			this.lblPauseMessage.AllowDrop = true;
 			this.lblPauseMessage.BackColor = System.Drawing.Color.White;
 			this.lblPauseMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblPauseMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 24f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblPauseMessage.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.lblPauseMessage.Location = new System.Drawing.Point(56, 32);
 			this.lblPauseMessage.Name = "lblPauseMessage";
@@ -86,7 +82,7 @@ namespace TailwindPOS
 			// frmPause
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(20, 39);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(18, 35);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Window;
 			this.ClientSize = new System.Drawing.Size(844, 334);
@@ -106,6 +102,7 @@ namespace TailwindPOS
 			this.commandButtonHelper1.SetStyle(this.cbReturn, 1);
 			this.Activated += new System.EventHandler(this.frmPause_Activated);
 			this.Closed += new System.EventHandler(this.Form_Closed);
+			this.Load += new System.EventHandler(this.Form_Load);
 			this.ResumeLayout(false);
 		}
 		#endregion

@@ -41,9 +41,9 @@ namespace TailwindPOS
 
 		private void frmCashCount_Activated(System.Object eventSender, System.EventArgs eventArgs)
 		{
-			if (UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+			if (UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm != eventSender)
 			{
-				UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (System.Windows.Forms.Form) eventSender;
+				UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm = (System.Windows.Forms.Form) eventSender;
 			}
 		}
 		TextBox m_LastTextBox = null;
@@ -102,8 +102,8 @@ namespace TailwindPOS
 			txtHundreds.BackColor = SystemColors.Window;
 		}
 
-		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-		private void Form_Load()
+		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load event and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
+		private void Form_Load(Object eventSender, EventArgs eventArgs)
 		{
 			ucNumbers.ShowValue = false;
 		}
@@ -229,7 +229,7 @@ namespace TailwindPOS
 		private void ucNumbers_OnBack(Object Sender, EventArgs e)
 		{
 			string val = "";
-			if (!(m_LastTextBox is null))
+			if (m_LastTextBox != null)
 			{
 				val = m_LastTextBox.Text.Trim();
 				if (val == "0")
@@ -248,7 +248,7 @@ namespace TailwindPOS
 		{
 			string Number = e.Number;
 			string val = "";
-			if (!(m_LastTextBox is null))
+			if (m_LastTextBox != null)
 			{
 				val = m_LastTextBox.Text.Trim();
 				if (val == "0")

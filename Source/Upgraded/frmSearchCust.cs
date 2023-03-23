@@ -39,9 +39,9 @@ namespace TailwindPOS
 
 		private void frmSearchCust_Activated(System.Object eventSender, System.EventArgs eventArgs)
 		{
-			if (UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+			if (UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm != eventSender)
 			{
-				UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (System.Windows.Forms.Form) eventSender;
+				UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm = (System.Windows.Forms.Form) eventSender;
 			}
 		}
 		private int m_ChosenCustomer = 0;
@@ -71,8 +71,8 @@ namespace TailwindPOS
 			}
 		}
 
-		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-		private void Form_Load()
+		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load event and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
+		private void Form_Load(Object eventSender, EventArgs eventArgs)
 		{
 			ucLettersPad.ShowChars = true;
 			fgCustomers.RowsCount = 1;
@@ -103,19 +103,19 @@ namespace TailwindPOS
 			while (!rs.EOF)
 			{
 				//Custo No
-				//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1049
+				//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://docs.mobilize.net/vbuc/ewis#1049
 				fgCustomers[index, 0].Value = (Convert.IsDBNull(rs["CustomerID"])) ? "" : Convert.ToString(rs["CustomerID"]);
 				//First Name
-				//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1049
+				//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://docs.mobilize.net/vbuc/ewis#1049
 				fgCustomers[index, 1].Value = (Convert.IsDBNull(rs["FirstName"])) ? "" : Convert.ToString(rs["FirstName"]);
 				//Last Name
-				//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1049
+				//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://docs.mobilize.net/vbuc/ewis#1049
 				fgCustomers[index, 2].Value = (Convert.IsDBNull(rs["LastName"])) ? "" : Convert.ToString(rs["LastName"]);
 				//Email
-				//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1049
+				//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://docs.mobilize.net/vbuc/ewis#1049
 				fgCustomers[index, 3].Value = (Convert.IsDBNull(rs["Email"])) ? "" : Convert.ToString(rs["Email"]);
 				//Street1
-				//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1049
+				//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://docs.mobilize.net/vbuc/ewis#1049
 				fgCustomers[index, 4].Value = (Convert.IsDBNull(rs["StreetAddress1"])) ? "" : Convert.ToString(rs["StreetAddress1"]);
 				index++;
 				rs.MoveNext();

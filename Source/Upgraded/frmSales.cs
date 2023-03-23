@@ -43,9 +43,9 @@ namespace TailwindPOS
 
 		private void frmSales_Activated(System.Object eventSender, System.EventArgs eventArgs)
 		{
-			if (UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+			if (UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm != eventSender)
 			{
-				UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (System.Windows.Forms.Form) eventSender;
+				UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm = (System.Windows.Forms.Form) eventSender;
 			}
 		}
 		bool m_Toggle_Quantity = false;
@@ -85,7 +85,7 @@ namespace TailwindPOS
 
 		private void cbAddCustomer_Click(Object eventSender, EventArgs eventArgs)
 		{
-			frmCustAdd custAdd = frmCustAdd.CreateInstance();
+			frmCustAdd custAdd = new frmCustAdd();
 			custAdd.ShowDialog();
 			if (custAdd.SavedCustomer)
 			{
@@ -102,7 +102,7 @@ namespace TailwindPOS
 
 		private void cbCustomerSearch_Click(Object eventSender, EventArgs eventArgs)
 		{
-			frmSearchCust custSearch = frmSearchCust.CreateInstance();
+			frmSearchCust custSearch = new frmSearchCust();
 			custSearch.ShowDialog();
 			if (custSearch.ChosenCustomer > 0)
 			{
@@ -121,7 +121,7 @@ namespace TailwindPOS
 				result = MessageBox.Show("Are you ready to end your shift", AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()), MessageBoxButtons.YesNo);
 				if (result == System.Windows.Forms.DialogResult.Yes)
 				{
-					cash = frmCashCount.CreateInstance();
+					cash = new frmCashCount();
 					cash.ShowDialog();
 					this.Hide();
 				}
@@ -131,7 +131,7 @@ namespace TailwindPOS
 		private void cbPayment_Click(Object eventSender, EventArgs eventArgs)
 		{
 			OrderedDictionary payments = null;
-			frmPayment pay = frmPayment.CreateInstance();
+			frmPayment pay = new frmPayment();
 			pay.TransactionAmount = m_total;
 			pay.UpdateTotals();
 			// We need a ticket number
@@ -259,7 +259,7 @@ namespace TailwindPOS
 
 		private void Pause()
 		{
-			frmPause Pause = frmPause.CreateInstance();
+			frmPause Pause = new frmPause();
 			Pause.ShowDialog();
 		}
 
@@ -292,7 +292,7 @@ namespace TailwindPOS
 			this.fgItems[0, 4].Value = " Total ";
 		}
 
-		//UPGRADE_NOTE: (7001) The following declaration (ReturnFromPause) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+		//UPGRADE_NOTE: (7001) The following declaration (ReturnFromPause) seems to be dead code More Information: https://docs.mobilize.net/vbuc/ewis#7001
 		//private void ReturnFromPause()
 		//{
 			//Reset();
@@ -344,8 +344,8 @@ namespace TailwindPOS
 		}
 
 
-		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-		private void Form_Load()
+		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load event and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
+		private void Form_Load(Object eventSender, EventArgs eventArgs)
 		{
 			Pause();
 			MainModule.CurrentShift.UserID = MainModule.PRESET_TERMINALID;

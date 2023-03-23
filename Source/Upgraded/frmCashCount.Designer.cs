@@ -14,7 +14,7 @@ namespace TailwindPOS
 				if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
 				{
 					m_InitializingDefInstance = true;
-					m_vb6FormDefInstance = CreateInstance();
+					m_vb6FormDefInstance = new frmCashCount();
 					m_InitializingDefInstance = false;
 				}
 				return m_vb6FormDefInstance;
@@ -27,12 +27,6 @@ namespace TailwindPOS
 
 		#endregion
 		#region "Windows Form Designer generated code "
-		public static frmCashCount CreateInstance()
-		{
-			frmCashCount theInstance = new frmCashCount();
-			theInstance.Form_Load();
-			return theInstance;
-		}
 		private string[] visualControls = new string[]{"components", "ToolTipMain", "txtHalfDollars", "txtPennies", "txtNickels", "txtDimes", "txtQuarters", "txtOnes", "txtFives", "txtTens", "txtHundreds", "txtTwenties", "txtFifties", "cbOK", "cbClear", "ucNumbers", "lblMessage", "lblPennies", "lblNickels", "lblDimes", "lblQuarters", "lblHalfDollars", "lblOnes", "lblFives", "lblTens", "lblTwenties", "lblFifties", "lblHundreds", "lblTotalTitle", "lblTotal", "commandButtonHelper1"};
 		//Required by the Windows Form Designer
 		private System.ComponentModel.IContainer components;
@@ -65,7 +59,7 @@ namespace TailwindPOS
 		public System.Windows.Forms.Label lblHundreds;
 		public System.Windows.Forms.Label lblTotalTitle;
 		public System.Windows.Forms.Label lblTotal;
-		public UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1;
+		public UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1;
 		//NOTE: The following procedure is required by the Windows Form Designer
 		//It can be modified using the Windows Form Designer.
 		//Do not modify it using the code editor.
@@ -104,7 +98,7 @@ namespace TailwindPOS
 			this.lblTotalTitle = new System.Windows.Forms.Label();
 			this.lblTotal = new System.Windows.Forms.Label();
 			this.SuspendLayout();
-			this.commandButtonHelper1 = new UpgradeHelpers.Gui.CommandButtonHelper(this.components);
+			this.commandButtonHelper1 = new UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
 			// 
 			// txtHalfDollars
 			// 
@@ -113,6 +107,7 @@ namespace TailwindPOS
 			this.txtHalfDollars.BackColor = System.Drawing.Color.White;
 			this.txtHalfDollars.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtHalfDollars.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtHalfDollars.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtHalfDollars.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.txtHalfDollars.Location = new System.Drawing.Point(160, 296);
 			this.txtHalfDollars.MaxLength = 0;
@@ -132,6 +127,7 @@ namespace TailwindPOS
 			this.txtPennies.BackColor = System.Drawing.Color.White;
 			this.txtPennies.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtPennies.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtPennies.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtPennies.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.txtPennies.Location = new System.Drawing.Point(160, 72);
 			this.txtPennies.MaxLength = 0;
@@ -151,6 +147,7 @@ namespace TailwindPOS
 			this.txtNickels.BackColor = System.Drawing.Color.White;
 			this.txtNickels.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtNickels.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtNickels.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtNickels.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.txtNickels.Location = new System.Drawing.Point(160, 128);
 			this.txtNickels.MaxLength = 0;
@@ -170,6 +167,7 @@ namespace TailwindPOS
 			this.txtDimes.BackColor = System.Drawing.Color.White;
 			this.txtDimes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtDimes.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtDimes.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtDimes.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.txtDimes.Location = new System.Drawing.Point(160, 184);
 			this.txtDimes.MaxLength = 0;
@@ -189,6 +187,7 @@ namespace TailwindPOS
 			this.txtQuarters.BackColor = System.Drawing.Color.White;
 			this.txtQuarters.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtQuarters.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtQuarters.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtQuarters.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.txtQuarters.Location = new System.Drawing.Point(160, 240);
 			this.txtQuarters.MaxLength = 0;
@@ -208,6 +207,7 @@ namespace TailwindPOS
 			this.txtOnes.BackColor = System.Drawing.Color.White;
 			this.txtOnes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtOnes.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtOnes.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtOnes.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.txtOnes.Location = new System.Drawing.Point(416, 72);
 			this.txtOnes.MaxLength = 0;
@@ -227,6 +227,7 @@ namespace TailwindPOS
 			this.txtFives.BackColor = System.Drawing.Color.White;
 			this.txtFives.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtFives.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtFives.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtFives.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.txtFives.Location = new System.Drawing.Point(416, 128);
 			this.txtFives.MaxLength = 0;
@@ -246,6 +247,7 @@ namespace TailwindPOS
 			this.txtTens.BackColor = System.Drawing.Color.White;
 			this.txtTens.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtTens.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtTens.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtTens.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.txtTens.Location = new System.Drawing.Point(416, 184);
 			this.txtTens.MaxLength = 0;
@@ -265,6 +267,7 @@ namespace TailwindPOS
 			this.txtHundreds.BackColor = System.Drawing.Color.White;
 			this.txtHundreds.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtHundreds.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtHundreds.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtHundreds.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.txtHundreds.Location = new System.Drawing.Point(416, 352);
 			this.txtHundreds.MaxLength = 0;
@@ -284,6 +287,7 @@ namespace TailwindPOS
 			this.txtTwenties.BackColor = System.Drawing.Color.White;
 			this.txtTwenties.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtTwenties.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtTwenties.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtTwenties.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.txtTwenties.Location = new System.Drawing.Point(416, 240);
 			this.txtTwenties.MaxLength = 0;
@@ -303,6 +307,7 @@ namespace TailwindPOS
 			this.txtFifties.BackColor = System.Drawing.Color.White;
 			this.txtFifties.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtFifties.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtFifties.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtFifties.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.txtFifties.Location = new System.Drawing.Point(416, 296);
 			this.txtFifties.MaxLength = 0;
@@ -319,6 +324,7 @@ namespace TailwindPOS
 			// 
 			this.cbOK.AllowDrop = true;
 			this.cbOK.BackColor = System.Drawing.Color.FromArgb(97, 44, 67);
+			this.cbOK.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cbOK.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cbOK.Location = new System.Drawing.Point(568, 136);
 			this.cbOK.Name = "cbOK";
@@ -334,6 +340,7 @@ namespace TailwindPOS
 			// 
 			this.cbClear.AllowDrop = true;
 			this.cbClear.BackColor = System.Drawing.Color.White;
+			this.cbClear.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cbClear.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cbClear.Location = new System.Drawing.Point(568, 72);
 			this.cbClear.Name = "cbClear";
@@ -360,6 +367,7 @@ namespace TailwindPOS
 			this.lblMessage.AllowDrop = true;
 			this.lblMessage.BackColor = System.Drawing.Color.White;
 			this.lblMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblMessage.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblMessage.Location = new System.Drawing.Point(8, 8);
 			this.lblMessage.Name = "lblMessage";
@@ -527,6 +535,7 @@ namespace TailwindPOS
 			this.lblTotalTitle.AllowDrop = true;
 			this.lblTotalTitle.BackColor = System.Drawing.Color.White;
 			this.lblTotalTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblTotalTitle.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblTotalTitle.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblTotalTitle.Location = new System.Drawing.Point(568, 8);
 			this.lblTotalTitle.Name = "lblTotalTitle";
@@ -540,6 +549,7 @@ namespace TailwindPOS
 			this.lblTotal.AllowDrop = true;
 			this.lblTotal.BackColor = System.Drawing.Color.White;
 			this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblTotal.Font = new System.Drawing.Font("Arial", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
 			this.lblTotal.Location = new System.Drawing.Point(728, 8);
 			this.lblTotal.Name = "lblTotal";
@@ -552,7 +562,7 @@ namespace TailwindPOS
 			// frmCashCount
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(18, 35);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(16, 31);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(1038, 640);
@@ -597,6 +607,7 @@ namespace TailwindPOS
 			this.commandButtonHelper1.SetStyle(this.cbClear, 1);
 			this.Activated += new System.EventHandler(this.frmCashCount_Activated);
 			this.Closed += new System.EventHandler(this.Form_Closed);
+			this.Load += new System.EventHandler(this.Form_Load);
 			this.ResumeLayout(false);
 		}
 		#endregion

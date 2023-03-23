@@ -14,7 +14,7 @@ namespace TailwindPOS
 				if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
 				{
 					m_InitializingDefInstance = true;
-					m_vb6FormDefInstance = CreateInstance();
+					m_vb6FormDefInstance = new frmGiftCardCode();
 					m_InitializingDefInstance = false;
 				}
 				return m_vb6FormDefInstance;
@@ -27,11 +27,6 @@ namespace TailwindPOS
 
 		#endregion
 		#region "Windows Form Designer generated code "
-		public static frmGiftCardCode CreateInstance()
-		{
-			frmGiftCardCode theInstance = new frmGiftCardCode();
-			return theInstance;
-		}
 		private string[] visualControls = new string[]{"components", "ToolTipMain", "cbCancel", "cbOK", "txtCode", "lblMessage", "commandButtonHelper1"};
 		//Required by the Windows Form Designer
 		private System.ComponentModel.IContainer components;
@@ -40,7 +35,7 @@ namespace TailwindPOS
 		public System.Windows.Forms.Button cbOK;
 		public System.Windows.Forms.TextBox txtCode;
 		public System.Windows.Forms.Label lblMessage;
-		public UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1;
+		public UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1;
 		//NOTE: The following procedure is required by the Windows Form Designer
 		//It can be modified using the Windows Form Designer.
 		//Do not modify it using the code editor.
@@ -55,7 +50,7 @@ namespace TailwindPOS
 			this.txtCode = new System.Windows.Forms.TextBox();
 			this.lblMessage = new System.Windows.Forms.Label();
 			this.SuspendLayout();
-			this.commandButtonHelper1 = new UpgradeHelpers.Gui.CommandButtonHelper(this.components);
+			this.commandButtonHelper1 = new UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
 			// 
 			// cbCancel
 			// 
@@ -122,7 +117,7 @@ namespace TailwindPOS
 			// frmGiftCardCode
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(18, 35);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(16, 30);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(688, 213);

@@ -5,11 +5,6 @@ namespace TailwindPOS
 	{
 
 		#region "Windows Form Designer generated code "
-		public static ucNumbersPad CreateInstance()
-		{
-			ucNumbersPad theInstance = new ucNumbersPad();
-			return theInstance;
-		}
 		private string[] visualControls = new string[]{"components", "ToolTipMain", "txtAmount", "cb_Period", "cb_Number00", "cb_Number0", "cb_Enter", "cb_Number3", "cb_Number2", "cb_Number1", "cb_Clear", "cb_Number6", "cb_Number5", "cb_Number4", "cb_Back", "cb_Number9", "cb_Number8", "cb_Number7", "commandButtonHelper1"};
 		//Required by the Windows Form Designer
 		private System.ComponentModel.IContainer components;
@@ -30,7 +25,7 @@ namespace TailwindPOS
 		internal System.Windows.Forms.Button cb_Number9;
 		internal System.Windows.Forms.Button cb_Number8;
 		internal System.Windows.Forms.Button cb_Number7;
-		public UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1;
+		public UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1;
 		//NOTE: The following procedure is required by the Windows Form Designer
 		//It can be modified using the Windows Form Designer.
 		//Do not modify it using the code editor.
@@ -57,7 +52,7 @@ namespace TailwindPOS
 			this.cb_Number8 = new System.Windows.Forms.Button();
 			this.cb_Number7 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
-			this.commandButtonHelper1 = new UpgradeHelpers.Gui.CommandButtonHelper(this.components);
+			this.commandButtonHelper1 = new UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
 			// 
 			// txtAmount
 			// 
@@ -339,6 +334,7 @@ namespace TailwindPOS
 			this.Controls.Add(this.cb_Number9);
 			this.Controls.Add(this.cb_Number8);
 			this.Controls.Add(this.cb_Number7);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Location = new System.Drawing.Point(0, 0);
 			this.Name = "ucNumbersPad";
 			this.commandButtonHelper1.SetStyle(this.cb_Period, 1);
