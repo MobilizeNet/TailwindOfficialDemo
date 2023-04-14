@@ -167,6 +167,7 @@ namespace TailwindPOS
 			this.gbCustomerInfo.AllowDrop = true;
 			this.gbCustomerInfo.BackColor = System.Drawing.Color.White;
 			this.gbCustomerInfo.Controls.Add(this.lblCustomerInfo);
+			this.gbCustomerInfo.Cursor = UpgradeHelpers.Helpers.CursorHelper.CursorDefault;
 			this.gbCustomerInfo.Enabled = true;
 			this.gbCustomerInfo.Font = new System.Drawing.Font("Arial", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.gbCustomerInfo.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
@@ -313,6 +314,7 @@ namespace TailwindPOS
 			this.frSubTotals.Controls.Add(this.lblTotalTitle);
 			this.frSubTotals.Controls.Add(this.lblTaxTitle);
 			this.frSubTotals.Controls.Add(this.lblSubTotalTitle);
+			this.frSubTotals.Cursor = UpgradeHelpers.Helpers.CursorHelper.CursorDefault;
 			this.frSubTotals.Enabled = true;
 			this.frSubTotals.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.frSubTotals.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);

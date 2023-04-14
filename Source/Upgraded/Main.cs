@@ -299,7 +299,7 @@ namespace TailwindPOS
 			TempParameter.Value = customerInfo;
 			objcommand.Parameters.Add(TempParameter);
 
-			ADORecordSetHelper rs = new ADORecordSetHelper("");
+			ADORecordSetHelper rs = new ADORecordSetHelper();
 			rs.CursorLocation = CursorLocationEnum.adUseClient;
 			rs.Open(objcommand);
 			rs.ActiveConnection = null;
@@ -364,7 +364,7 @@ namespace TailwindPOS
 			TempParameter.Value = CustomerID;
 			objcommand.Parameters.Add(TempParameter);
 
-			ADORecordSetHelper rs = new ADORecordSetHelper("");
+			ADORecordSetHelper rs = new ADORecordSetHelper();
 			rs.CursorLocation = CursorLocationEnum.adUseClient;
 			rs.Open(objcommand);
 			rs.ActiveConnection = null;

@@ -85,6 +85,7 @@ namespace TailwindPOS
 			this.gbPayments.Controls.Add(this.cbCheck);
 			this.gbPayments.Controls.Add(this.cbGiftCard);
 			this.gbPayments.Controls.Add(this.ucNumbers);
+			this.gbPayments.Cursor = UpgradeHelpers.Helpers.CursorHelper.CursorDefault;
 			this.gbPayments.Enabled = true;
 			this.gbPayments.Font = new System.Drawing.Font("Gin", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.gbPayments.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
@@ -317,7 +318,7 @@ namespace TailwindPOS
 			// frmPayment
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(17, 31);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(16, 30);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(1219, 659);

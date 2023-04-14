@@ -82,6 +82,10 @@
       <HintPath>..\UpgradeSupport\UpgradeHelpers.Utils.ReflectionHelper.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="UpgradeHelpers.Utils.CursorHelper">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UpgradeSupport\UpgradeHelpers.Utils.CursorHelper.dll</HintPath>
+    </Reference>
     <Reference Include="UpgradeHelpers.Gui.Utils">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\UpgradeSupport\UpgradeHelpers.Gui.Utils.dll</HintPath>

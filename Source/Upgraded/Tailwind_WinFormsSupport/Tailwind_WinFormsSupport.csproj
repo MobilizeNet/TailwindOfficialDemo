@@ -63,6 +63,10 @@
       <SpecificVerion>False</SpecificVerion>
       <HintPath>..\..\UpgradeSupport\UpgradeHelpers.SupportHelper.dll</HintPath>
     </Reference>
+    <Reference Include="UpgradeHelpers.Utils.CursorHelper">
+      <SpecificVerion>False</SpecificVerion>
+      <HintPath>..\..\UpgradeSupport\UpgradeHelpers.Utils.CursorHelper.dll</HintPath>
+    </Reference>
     <Reference Include="UpgradeHelpers.Utils">
       <SpecificVerion>False</SpecificVerion>
       <HintPath>..\..\UpgradeSupport\UpgradeHelpers.Utils.dll</HintPath>
