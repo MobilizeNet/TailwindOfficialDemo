@@ -562,7 +562,7 @@ namespace TailwindPOS
 			// frmCashCount
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(16, 31);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(18, 35);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(1038, 640);
