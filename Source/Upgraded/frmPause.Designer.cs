@@ -82,7 +82,7 @@ namespace TailwindPOS
 			// frmPause
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(17, 36);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(19, 38);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Window;
 			this.ClientSize = new System.Drawing.Size(844, 334);
