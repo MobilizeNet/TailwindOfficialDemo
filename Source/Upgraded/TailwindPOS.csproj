@@ -101,6 +101,13 @@
     <Reference Include="MSDATASRC">
       <Name>MSDATASRC</Name>
     </Reference>
+    <COMReference Include="Microsoft.StdFormat">
+      <Guid>{6B263850-900B-11D0-9484-00A0C91110ED}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
     <ProjectReference Include="Tailwind_WinFormsSupport\Tailwind_WinFormsSupport.csproj">
       <Project>{F4752893-5AA4-48FA-9AE4-21E589D6A9C5}</Project>
       <Name>Tailwind_WinFormsSupport</Name>
