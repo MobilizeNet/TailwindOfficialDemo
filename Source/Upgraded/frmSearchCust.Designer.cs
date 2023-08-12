@@ -103,7 +103,7 @@ namespace TailwindPOS
 			// frmSearchCust
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(18, 35);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(16, 31);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(1264, 737);

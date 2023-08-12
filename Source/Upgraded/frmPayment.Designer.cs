@@ -318,7 +318,7 @@ namespace TailwindPOS
 			// frmPayment
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(18, 34);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(17, 31);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(1219, 659);
