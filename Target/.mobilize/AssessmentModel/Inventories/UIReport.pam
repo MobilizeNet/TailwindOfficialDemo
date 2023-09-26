@@ -1,0 +1,11 @@
+Element,ProjectId,FileId,Count,Status
+System.Windows.Forms.GroupBox,,,3,1
+System.Windows.Forms.TextBox,,,25,1
+System.Windows.Forms.Form,,,14,1
+System.Windows.Forms.PictureBox,,,1,1
+UpgradeHelpers.DataGridViewFlex,,,3,1
+System.Windows.Forms.UserControl,,,6,1
+System.Windows.Forms.ToolTip,,,9,0
+System.Windows.Forms.Button,,,82,1
+System.Windows.Forms.Label,,,44,1
+UpgradeHelpers.Gui.Controls.CommandButtonHelper,,,9,0
