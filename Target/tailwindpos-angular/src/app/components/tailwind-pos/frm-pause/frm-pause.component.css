@@ -13,6 +13,7 @@
 }
 .TailwindPOS_frmPause .lblPauseMessage {
     background-color: White;
+    font-size: 24pt;
     color: rgba(0, 0, 0, 1);
     left: 56px;
     top: 32px;
@@ -24,6 +25,7 @@
 }
 .TailwindPOS_frmPause .cbReturn {
     background-color: #612C43;
+    font-size: 24pt;
     color: rgba(0, 0, 0, 1);
     left: 224px;
     top: 160px;

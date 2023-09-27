@@ -3,18 +3,13 @@ using Mobilize.Web.Extensions;
 
 namespace TailwindPOS
 {
-	partial class ucNumbersPad
-	{
 
-		#region "Windows Form Designer generated code "
-		public static ucNumbersPad CreateInstance()
-		{
-			ucNumbersPad theInstance = new ucNumbersPad();
-			return theInstance;
-		}
+   partial class ucNumbersPad
+   {
 
+#region "Windows Form Designer generated code "
       [Intercepted]
-      private string[] visualControls { get; set; } = new string[]{"components", "ToolTipMain", "txtAmount", "cb_Period", "cb_Number00", "cb_Number0", "cb_Enter", "cb_Number3", "cb_Number2", "cb_Number1", "cb_Clear", "cb_Number6", "cb_Number5", "cb_Number4", "cb_Back", "cb_Number9", "cb_Number8", "cb_Number7", "commandButtonHelper1"};
+      private string[] visualControls { get; set; } = new string[] { "components", "ToolTipMain", "txtAmount", "cb_Period", "cb_Number00", "cb_Number0", "cb_Enter", "cb_Number3", "cb_Number2", "cb_Number1", "cb_Clear", "cb_Number6", "cb_Number5", "cb_Number4", "cb_Back", "cb_Number9", "cb_Number8", "cb_Number7", "commandButtonHelper1" };
 
       //Required by the Windows Form Designer
       [Intercepted]
@@ -72,7 +67,8 @@ namespace TailwindPOS
       internal Mobilize.Web.Button cb_Number7 { get; set; }
 
       [Intercepted]
-      public Stub._UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1 { get; set; }
+      public Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1 { get; set; }
+
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
@@ -80,34 +76,34 @@ namespace TailwindPOS
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new Mobilize.Web.ControlCollection();
-      	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucNumbersPad));
-      	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
-      	this.txtAmount = new Mobilize.Web.TextBox();
-      	this.cb_Period = new Mobilize.Web.Button();
-      	this.cb_Number00 = new Mobilize.Web.Button();
-      	this.cb_Number0 = new Mobilize.Web.Button();
-      	this.cb_Enter = new Mobilize.Web.Button();
-      	this.cb_Number3 = new Mobilize.Web.Button();
-      	this.cb_Number2 = new Mobilize.Web.Button();
-      	this.cb_Number1 = new Mobilize.Web.Button();
-      	this.cb_Clear = new Mobilize.Web.Button();
-      	this.cb_Number6 = new Mobilize.Web.Button();
-      	this.cb_Number5 = new Mobilize.Web.Button();
-      	this.cb_Number4 = new Mobilize.Web.Button();
-      	this.cb_Back = new Mobilize.Web.Button();
-      	this.cb_Number9 = new Mobilize.Web.Button();
-      	this.cb_Number8 = new Mobilize.Web.Button();
-      	this.cb_Number7 = new Mobilize.Web.Button();
-      	this.SuspendLayout();
-      	this.commandButtonHelper1 = new Stub._UpgradeHelpers.Gui.CommandButtonHelper(this.components);
-      	// 
-      	// txtAmount
-      	// 
-      	this.txtAmount.AcceptsReturn = true;
-      	this.txtAmount.AllowDrop = true;
-      	this.txtAmount.BackColor = System.Drawing.Color.White;
-      	this.txtAmount.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
+         this.components = new Mobilize.Web.ControlCollection();
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucNumbersPad));
+         this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
+         this.txtAmount = new Mobilize.Web.TextBox();
+         this.cb_Period = new Mobilize.Web.Button();
+         this.cb_Number00 = new Mobilize.Web.Button();
+         this.cb_Number0 = new Mobilize.Web.Button();
+         this.cb_Enter = new Mobilize.Web.Button();
+         this.cb_Number3 = new Mobilize.Web.Button();
+         this.cb_Number2 = new Mobilize.Web.Button();
+         this.cb_Number1 = new Mobilize.Web.Button();
+         this.cb_Clear = new Mobilize.Web.Button();
+         this.cb_Number6 = new Mobilize.Web.Button();
+         this.cb_Number5 = new Mobilize.Web.Button();
+         this.cb_Number4 = new Mobilize.Web.Button();
+         this.cb_Back = new Mobilize.Web.Button();
+         this.cb_Number9 = new Mobilize.Web.Button();
+         this.cb_Number8 = new Mobilize.Web.Button();
+         this.cb_Number7 = new Mobilize.Web.Button();
+         this.SuspendLayout();
+         this.commandButtonHelper1 = new Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
+         // 
+         // txtAmount
+         // 
+         this.txtAmount.AcceptsReturn = true;
+         this.txtAmount.AllowDrop = true;
+         this.txtAmount.BackColor = System.Drawing.Color.White;
+         this.txtAmount.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtAmount.Properties().Cursor = null;
          this.txtAmount.Font = new Mobilize.Web.Font("Brandon Grotesque Light", 36f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtAmount.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
@@ -115,8 +111,8 @@ namespace TailwindPOS
          this.txtAmount.Location = new System.Drawing.Point(8, 8);
          this.txtAmount.MaxLength = 0;
          this.txtAmount.Name = "txtAmount";
-         this.txtAmount.PasswordChar = (char) 42;
-         this.txtAmount.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtAmount.PasswordChar = (char)42;
+         this.txtAmount.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtAmount.Size = new System.Drawing.Size(313, 73);
          this.txtAmount.TabIndex = 15;
          this.txtAmount.TextAlign = Mobilize.Web.HorizontalAlignment.Right;
@@ -130,7 +126,7 @@ namespace TailwindPOS
          this.cb_Period.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Period.Location = new System.Drawing.Point(168, 328);
          this.cb_Period.Name = "cb_Period";
-         this.cb_Period.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Period.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Period.Size = new System.Drawing.Size(73, 73);
          this.cb_Period.TabIndex = 14;
          this.cb_Period.Text = ".";
@@ -146,7 +142,7 @@ namespace TailwindPOS
          this.cb_Number00.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Number00.Location = new System.Drawing.Point(88, 328);
          this.cb_Number00.Name = "cb_Number00";
-         this.cb_Number00.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Number00.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Number00.Size = new System.Drawing.Size(73, 73);
          this.cb_Number00.TabIndex = 13;
          this.cb_Number00.Text = "00";
@@ -162,7 +158,7 @@ namespace TailwindPOS
          this.cb_Number0.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Number0.Location = new System.Drawing.Point(8, 328);
          this.cb_Number0.Name = "cb_Number0";
-         this.cb_Number0.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Number0.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Number0.Size = new System.Drawing.Size(73, 73);
          this.cb_Number0.TabIndex = 12;
          this.cb_Number0.Text = "0";
@@ -178,7 +174,7 @@ namespace TailwindPOS
          this.cb_Enter.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Enter.Location = new System.Drawing.Point(248, 248);
          this.cb_Enter.Name = "cb_Enter";
-         this.cb_Enter.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Enter.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Enter.Size = new System.Drawing.Size(73, 153);
          this.cb_Enter.TabIndex = 11;
          this.cb_Enter.Text = "+";
@@ -194,7 +190,7 @@ namespace TailwindPOS
          this.cb_Number3.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Number3.Location = new System.Drawing.Point(168, 248);
          this.cb_Number3.Name = "cb_Number3";
-         this.cb_Number3.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Number3.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Number3.Size = new System.Drawing.Size(73, 73);
          this.cb_Number3.TabIndex = 10;
          this.cb_Number3.Text = "3";
@@ -210,7 +206,7 @@ namespace TailwindPOS
          this.cb_Number2.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Number2.Location = new System.Drawing.Point(88, 248);
          this.cb_Number2.Name = "cb_Number2";
-         this.cb_Number2.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Number2.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Number2.Size = new System.Drawing.Size(73, 73);
          this.cb_Number2.TabIndex = 9;
          this.cb_Number2.Text = "2";
@@ -226,7 +222,7 @@ namespace TailwindPOS
          this.cb_Number1.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Number1.Location = new System.Drawing.Point(8, 248);
          this.cb_Number1.Name = "cb_Number1";
-         this.cb_Number1.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Number1.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Number1.Size = new System.Drawing.Size(73, 73);
          this.cb_Number1.TabIndex = 8;
          this.cb_Number1.Text = "1";
@@ -242,7 +238,7 @@ namespace TailwindPOS
          this.cb_Clear.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Clear.Location = new System.Drawing.Point(248, 168);
          this.cb_Clear.Name = "cb_Clear";
-         this.cb_Clear.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Clear.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Clear.Size = new System.Drawing.Size(73, 73);
          this.cb_Clear.TabIndex = 7;
          this.cb_Clear.Text = "C";
@@ -258,7 +254,7 @@ namespace TailwindPOS
          this.cb_Number6.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Number6.Location = new System.Drawing.Point(168, 168);
          this.cb_Number6.Name = "cb_Number6";
-         this.cb_Number6.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Number6.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Number6.Size = new System.Drawing.Size(73, 73);
          this.cb_Number6.TabIndex = 6;
          this.cb_Number6.Text = "6";
@@ -274,7 +270,7 @@ namespace TailwindPOS
          this.cb_Number5.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Number5.Location = new System.Drawing.Point(88, 168);
          this.cb_Number5.Name = "cb_Number5";
-         this.cb_Number5.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Number5.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Number5.Size = new System.Drawing.Size(73, 73);
          this.cb_Number5.TabIndex = 5;
          this.cb_Number5.Text = "5";
@@ -290,7 +286,7 @@ namespace TailwindPOS
          this.cb_Number4.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Number4.Location = new System.Drawing.Point(8, 168);
          this.cb_Number4.Name = "cb_Number4";
-         this.cb_Number4.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Number4.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Number4.Size = new System.Drawing.Size(73, 73);
          this.cb_Number4.TabIndex = 4;
          this.cb_Number4.Text = "4";
@@ -306,7 +302,7 @@ namespace TailwindPOS
          this.cb_Back.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Back.Location = new System.Drawing.Point(248, 88);
          this.cb_Back.Name = "cb_Back";
-         this.cb_Back.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Back.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Back.Size = new System.Drawing.Size(73, 73);
          this.cb_Back.TabIndex = 3;
          this.cb_Back.Text = "<-";
@@ -322,7 +318,7 @@ namespace TailwindPOS
          this.cb_Number9.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Number9.Location = new System.Drawing.Point(168, 88);
          this.cb_Number9.Name = "cb_Number9";
-         this.cb_Number9.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Number9.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Number9.Size = new System.Drawing.Size(73, 73);
          this.cb_Number9.TabIndex = 2;
          this.cb_Number9.Text = "9";
@@ -338,7 +334,7 @@ namespace TailwindPOS
          this.cb_Number8.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Number8.Location = new System.Drawing.Point(88, 88);
          this.cb_Number8.Name = "cb_Number8";
-         this.cb_Number8.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Number8.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Number8.Size = new System.Drawing.Size(73, 73);
          this.cb_Number8.TabIndex = 1;
          this.cb_Number8.Text = "8";
@@ -354,7 +350,7 @@ namespace TailwindPOS
          this.cb_Number7.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cb_Number7.Location = new System.Drawing.Point(8, 88);
          this.cb_Number7.Name = "cb_Number7";
-         this.cb_Number7.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cb_Number7.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cb_Number7.Size = new System.Drawing.Size(73, 73);
          this.cb_Number7.TabIndex = 0;
          this.cb_Number7.Text = "7";
@@ -381,6 +377,7 @@ namespace TailwindPOS
          this.Controls.Add(this.cb_Number9);
          this.Controls.Add(this.cb_Number8);
          this.Controls.Add(this.cb_Number7);
+         this.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Location = new System.Drawing.Point(0, 0);
          this.Name = "ucNumbersPad";
          this.commandButtonHelper1.SetStyle(this.cb_Period, 1);
@@ -400,38 +397,40 @@ namespace TailwindPOS
          this.commandButtonHelper1.SetStyle(this.cb_Number7, 1);
          this.ResumeLayout(false);
       }
-      #endregion
-      #region "Upgrade Support"
+#endregion
+
+#region "Upgrade Support"
       public sealed class OnEnterEventEventArgs
          : System.EventArgs
       {
 
-      [Intercepted]
+         [Intercepted]
+         public string Text_Renamed { get; set; } = "";
 
-      public string Text_Renamed { get; set; } = "";
 
-
-      public OnEnterEventEventArgs(string Text_Renamed)
-      	: base()
-      {
-      	this.Text_Renamed = Text_Renamed;
+         public OnEnterEventEventArgs(string Text_Renamed)
+         : base()
+         {
+            this.Text_Renamed = Text_Renamed;
+         }
       }
-   }
-   public sealed class OnNumberEventArgs
-      : System.EventArgs
-   {
+
+      public sealed class OnNumberEventArgs
+         : System.EventArgs
+      {
 
          [Intercepted]
-
          public string Number { get; set; } = "";
 
 
          public OnNumberEventArgs(string Number)
-         	: base()
+         : base()
          {
-         	this.Number = Number;
+            this.Number = Number;
          }
       }
-      #endregion
+#endregion
+
    }
+
 }

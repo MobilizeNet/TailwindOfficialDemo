@@ -9,8 +9,6 @@ namespace TailwindPOS
    {
 
       [Intercepted]
-
-
       public string PaymentType { get; set; } = "";
 
       [Intercepted]
@@ -20,4 +18,5 @@ namespace TailwindPOS
       public string PaymentInfo { get; set; } = "";
 
    }
+
 }

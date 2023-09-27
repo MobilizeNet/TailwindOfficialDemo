@@ -3,8 +3,9 @@ using Mobilize.Web.Extensions;
 
 namespace TailwindPOS
 {
-	partial class frmSales
-	{
+
+   partial class frmSales
+   {
 
 #region "Upgrade Support "
       [Intercepted]
@@ -15,34 +16,26 @@ namespace TailwindPOS
 
       public static frmSales DefInstance
       {
-      	get
-      	{
-      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
-      		{
-      			m_InitializingDefInstance = true;
-      			m_vb6FormDefInstance = CreateInstance();
-      			m_InitializingDefInstance = false;
-      		}
-      		return m_vb6FormDefInstance;
-      	}
-      	set
-      	{
-      		m_vb6FormDefInstance = value;
-      	}
+         get
+         {
+            if ( m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed )
+            {
+               m_InitializingDefInstance = true;
+               m_vb6FormDefInstance = new frmSales();
+               m_InitializingDefInstance = false;
+            }
+            return m_vb6FormDefInstance;
+         }
+         set
+         {
+            m_vb6FormDefInstance = value;
+         }
       }
+#endregion
 
-      #endregion
-      #region "Windows Form Designer generated code "
-
-      public static frmSales CreateInstance()
-      {
-      	frmSales theInstance = new frmSales();
-      	theInstance.Form_Load();
-      	return theInstance;
-      }
-
+#region "Windows Form Designer generated code "
       [Intercepted]
-      private string[] visualControls { get; set; } = new string[]{"components", "ToolTipMain", "cbRePrint", "ucNumericKeyPad", "cbQuantity", "fgItems", "lblCustomerInfo", "gbCustomerInfo", "cbBreak", "cbLogOff", "cbVoidTransaction", "cbVoidItem", "cbAddCustomer", "cbCustomerSearch", "cbPayment", "lblTotal", "lblTax", "lblSubTotal", "lblTotalTitle", "lblTaxTitle", "lblSubTotalTitle", "frSubTotals", "picLogo", "lblPOS", "lblPOSTitle", "lblCashier", "lblCashierTitle", "commandButtonHelper1"};
+      private string[] visualControls { get; set; } = new string[] { "components", "ToolTipMain", "cbRePrint", "ucNumericKeyPad", "cbQuantity", "fgItems", "lblCustomerInfo", "gbCustomerInfo", "cbBreak", "cbLogOff", "cbVoidTransaction", "cbVoidItem", "cbAddCustomer", "cbCustomerSearch", "cbPayment", "lblTotal", "lblTax", "lblSubTotal", "lblTotalTitle", "lblTaxTitle", "lblSubTotalTitle", "frSubTotals", "picLogo", "lblPOS", "lblPOSTitle", "lblCashier", "lblCashierTitle", "commandButtonHelper1" };
 
       //Required by the Windows Form Designer
       [Intercepted]
@@ -127,57 +120,57 @@ namespace TailwindPOS
       public Mobilize.Web.Label lblCashierTitle { get; set; }
 
       [Intercepted]
-      public Stub._UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1 { get; set; }
+      public Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1 { get; set; }
+
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
-
       [System.Diagnostics.DebuggerStepThrough()]
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new Mobilize.Web.ControlCollection();
-      	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSales));
-      	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
-      	this.cbRePrint = new Mobilize.Web.Button();
-      	this.ucNumericKeyPad = new ucNumbersPad();
-      	this.cbQuantity = new Mobilize.Web.Button();
-      	this.fgItems = new Mobilize.Web.VBUC.FlexGrid(this.components);
-      	this.gbCustomerInfo = new Mobilize.Web.GroupBox();
-      	this.lblCustomerInfo = new Mobilize.Web.Label();
-      	this.cbBreak = new Mobilize.Web.Button();
-      	this.cbLogOff = new Mobilize.Web.Button();
-      	this.cbVoidTransaction = new Mobilize.Web.Button();
-      	this.cbVoidItem = new Mobilize.Web.Button();
-      	this.cbAddCustomer = new Mobilize.Web.Button();
-      	this.cbCustomerSearch = new Mobilize.Web.Button();
-      	this.cbPayment = new Mobilize.Web.Button();
-      	this.frSubTotals = new Mobilize.Web.GroupBox();
-      	this.lblTotal = new Mobilize.Web.Label();
-      	this.lblTax = new Mobilize.Web.Label();
-      	this.lblSubTotal = new Mobilize.Web.Label();
-      	this.lblTotalTitle = new Mobilize.Web.Label();
-      	this.lblTaxTitle = new Mobilize.Web.Label();
-      	this.lblSubTotalTitle = new Mobilize.Web.Label();
-      	this.picLogo = new Mobilize.Web.PictureBox();
-      	this.lblPOS = new Mobilize.Web.Label();
-      	this.lblPOSTitle = new Mobilize.Web.Label();
-      	this.lblCashier = new Mobilize.Web.Label();
-      	this.lblCashierTitle = new Mobilize.Web.Label();
-      	this.gbCustomerInfo.SuspendLayout();
-      	this.frSubTotals.SuspendLayout();
-      	this.SuspendLayout();
-      	this.commandButtonHelper1 = new Stub._UpgradeHelpers.Gui.CommandButtonHelper(this.components);
-      	// 
-      	// cbRePrint
-      	// 
-      	this.cbRePrint.AllowDrop = true;
-      	this.cbRePrint.BackColor = System.Drawing.Color.White;
-      	this.cbRePrint.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 12f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
+         this.components = new Mobilize.Web.ControlCollection();
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSales));
+         this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
+         this.cbRePrint = new Mobilize.Web.Button();
+         this.ucNumericKeyPad = new ucNumbersPad();
+         this.cbQuantity = new Mobilize.Web.Button();
+         this.fgItems = new Mobilize.Web.VBUC.FlexGrid(this.components);
+         this.gbCustomerInfo = new Mobilize.Web.GroupBox();
+         this.lblCustomerInfo = new Mobilize.Web.Label();
+         this.cbBreak = new Mobilize.Web.Button();
+         this.cbLogOff = new Mobilize.Web.Button();
+         this.cbVoidTransaction = new Mobilize.Web.Button();
+         this.cbVoidItem = new Mobilize.Web.Button();
+         this.cbAddCustomer = new Mobilize.Web.Button();
+         this.cbCustomerSearch = new Mobilize.Web.Button();
+         this.cbPayment = new Mobilize.Web.Button();
+         this.frSubTotals = new Mobilize.Web.GroupBox();
+         this.lblTotal = new Mobilize.Web.Label();
+         this.lblTax = new Mobilize.Web.Label();
+         this.lblSubTotal = new Mobilize.Web.Label();
+         this.lblTotalTitle = new Mobilize.Web.Label();
+         this.lblTaxTitle = new Mobilize.Web.Label();
+         this.lblSubTotalTitle = new Mobilize.Web.Label();
+         this.picLogo = new Mobilize.Web.PictureBox();
+         this.lblPOS = new Mobilize.Web.Label();
+         this.lblPOSTitle = new Mobilize.Web.Label();
+         this.lblCashier = new Mobilize.Web.Label();
+         this.lblCashierTitle = new Mobilize.Web.Label();
+         this.gbCustomerInfo.SuspendLayout();
+         this.frSubTotals.SuspendLayout();
+         this.SuspendLayout();
+         this.commandButtonHelper1 = new Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
+         // 
+         // cbRePrint
+         // 
+         this.cbRePrint.AllowDrop = true;
+         this.cbRePrint.BackColor = System.Drawing.Color.White;
+         this.cbRePrint.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 12f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cbRePrint.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbRePrint.Location = new System.Drawing.Point(800, 384);
          this.cbRePrint.Name = "cbRePrint";
-         this.cbRePrint.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbRePrint.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbRePrint.Size = new System.Drawing.Size(185, 114);
          this.cbRePrint.TabIndex = 7;
          this.cbRePrint.Text = "PRINT LAST TICKET";
@@ -202,7 +195,7 @@ namespace TailwindPOS
          this.cbQuantity.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbQuantity.Location = new System.Drawing.Point(800, 264);
          this.cbQuantity.Name = "cbQuantity";
-         this.cbQuantity.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbQuantity.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbQuantity.Size = new System.Drawing.Size(185, 114);
          this.cbQuantity.TabIndex = 5;
          this.cbQuantity.Text = "CHANGE QUANTITY";
@@ -221,6 +214,7 @@ namespace TailwindPOS
          this.fgItems.Properties().ColumnHeadersHeightSizeMode = Mobilize.Web.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
          this.fgItems.ColumnsCount = 6;
          this.fgItems.FixedColumns = 0;
+         this.fgItems.FixedRows = 1;
          this.fgItems.Properties().FocusRect = Stub._UpgradeHelpers.FocusRectSettings.FocusNone;
          this.fgItems.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.fgItems.Location = new System.Drawing.Point(8, 8);
@@ -238,12 +232,13 @@ namespace TailwindPOS
          this.gbCustomerInfo.AllowDrop = true;
          this.gbCustomerInfo.BackColor = System.Drawing.Color.White;
          this.gbCustomerInfo.Controls.Add(this.lblCustomerInfo);
+         this.gbCustomerInfo.Properties().Cursor = Stub._UpgradeHelpers.Helpers.CursorHelper.CursorDefault;
          this.gbCustomerInfo.Enabled = true;
          this.gbCustomerInfo.Font = new Mobilize.Web.Font("Arial", 12f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.gbCustomerInfo.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.gbCustomerInfo.Location = new System.Drawing.Point(800, 136);
          this.gbCustomerInfo.Name = "gbCustomerInfo";
-         this.gbCustomerInfo.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.gbCustomerInfo.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.gbCustomerInfo.Size = new System.Drawing.Size(393, 114);
          this.gbCustomerInfo.TabIndex = 3;
          this.gbCustomerInfo.Text = "Customer Info";
@@ -258,7 +253,7 @@ namespace TailwindPOS
          this.lblCustomerInfo.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.lblCustomerInfo.Location = new System.Drawing.Point(24, 40);
          this.lblCustomerInfo.Name = "lblCustomerInfo";
-         this.lblCustomerInfo.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblCustomerInfo.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblCustomerInfo.Size = new System.Drawing.Size(337, 49);
          this.lblCustomerInfo.TabIndex = 4;
          // 
@@ -270,7 +265,7 @@ namespace TailwindPOS
          this.cbBreak.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbBreak.Location = new System.Drawing.Point(800, 504);
          this.cbBreak.Name = "cbBreak";
-         this.cbBreak.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbBreak.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbBreak.Size = new System.Drawing.Size(185, 114);
          this.cbBreak.TabIndex = 17;
          this.cbBreak.Text = "PAUSE";
@@ -286,7 +281,7 @@ namespace TailwindPOS
          this.cbLogOff.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbLogOff.Location = new System.Drawing.Point(1008, 504);
          this.cbLogOff.Name = "cbLogOff";
-         this.cbLogOff.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbLogOff.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbLogOff.Size = new System.Drawing.Size(185, 114);
          this.cbLogOff.TabIndex = 18;
          this.cbLogOff.Text = "LOG OFF";
@@ -302,7 +297,7 @@ namespace TailwindPOS
          this.cbVoidTransaction.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbVoidTransaction.Location = new System.Drawing.Point(1008, 384);
          this.cbVoidTransaction.Name = "cbVoidTransaction";
-         this.cbVoidTransaction.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbVoidTransaction.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbVoidTransaction.Size = new System.Drawing.Size(185, 114);
          this.cbVoidTransaction.TabIndex = 8;
          this.cbVoidTransaction.Text = "VOID TRANSACTION";
@@ -318,7 +313,7 @@ namespace TailwindPOS
          this.cbVoidItem.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbVoidItem.Location = new System.Drawing.Point(1008, 264);
          this.cbVoidItem.Name = "cbVoidItem";
-         this.cbVoidItem.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbVoidItem.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbVoidItem.Size = new System.Drawing.Size(185, 114);
          this.cbVoidItem.TabIndex = 6;
          this.cbVoidItem.Text = "VOID ITEM";
@@ -334,7 +329,7 @@ namespace TailwindPOS
          this.cbAddCustomer.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbAddCustomer.Location = new System.Drawing.Point(800, 8);
          this.cbAddCustomer.Name = "cbAddCustomer";
-         this.cbAddCustomer.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbAddCustomer.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbAddCustomer.Size = new System.Drawing.Size(185, 114);
          this.cbAddCustomer.TabIndex = 1;
          this.cbAddCustomer.Text = "ADD CUSTOMER";
@@ -350,7 +345,7 @@ namespace TailwindPOS
          this.cbCustomerSearch.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbCustomerSearch.Location = new System.Drawing.Point(1008, 8);
          this.cbCustomerSearch.Name = "cbCustomerSearch";
-         this.cbCustomerSearch.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbCustomerSearch.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbCustomerSearch.Size = new System.Drawing.Size(185, 114);
          this.cbCustomerSearch.TabIndex = 2;
          this.cbCustomerSearch.Text = "CUSTOMER SEARCH";
@@ -362,10 +357,11 @@ namespace TailwindPOS
          // 
          this.cbPayment.AllowDrop = true;
          this.cbPayment.BackColor = System.Drawing.Color.FromArgb(0, 192, 0);
+         this.cbPayment.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cbPayment.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbPayment.Location = new System.Drawing.Point(360, 688);
          this.cbPayment.Name = "cbPayment";
-         this.cbPayment.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbPayment.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbPayment.Size = new System.Drawing.Size(353, 73);
          this.cbPayment.TabIndex = 21;
          this.cbPayment.Text = "PAY";
@@ -383,12 +379,13 @@ namespace TailwindPOS
          this.frSubTotals.Controls.Add(this.lblTotalTitle);
          this.frSubTotals.Controls.Add(this.lblTaxTitle);
          this.frSubTotals.Controls.Add(this.lblSubTotalTitle);
+         this.frSubTotals.Properties().Cursor = Stub._UpgradeHelpers.Helpers.CursorHelper.CursorDefault;
          this.frSubTotals.Enabled = true;
          this.frSubTotals.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 12f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.frSubTotals.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.frSubTotals.Location = new System.Drawing.Point(360, 464);
          this.frSubTotals.Name = "frSubTotals";
-         this.frSubTotals.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.frSubTotals.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.frSubTotals.Size = new System.Drawing.Size(353, 217);
          this.frSubTotals.TabIndex = 10;
          this.frSubTotals.Visible = true;
@@ -402,7 +399,7 @@ namespace TailwindPOS
          this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.lblTotal.Location = new System.Drawing.Point(168, 128);
          this.lblTotal.Name = "lblTotal";
-         this.lblTotal.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblTotal.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblTotal.Size = new System.Drawing.Size(129, 33);
          this.lblTotal.TabIndex = 16;
          this.lblTotal.Text = "0.00";
@@ -413,10 +410,11 @@ namespace TailwindPOS
          this.lblTax.AllowDrop = true;
          this.lblTax.BackColor = System.Drawing.Color.White;
          this.lblTax.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblTax.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblTax.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.lblTax.Location = new System.Drawing.Point(168, 80);
          this.lblTax.Name = "lblTax";
-         this.lblTax.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblTax.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblTax.Size = new System.Drawing.Size(129, 33);
          this.lblTax.TabIndex = 14;
          this.lblTax.Text = "0.00";
@@ -427,10 +425,11 @@ namespace TailwindPOS
          this.lblSubTotal.AllowDrop = true;
          this.lblSubTotal.BackColor = System.Drawing.Color.White;
          this.lblSubTotal.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblSubTotal.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblSubTotal.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.lblSubTotal.Location = new System.Drawing.Point(168, 32);
          this.lblSubTotal.Name = "lblSubTotal";
-         this.lblSubTotal.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblSubTotal.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblSubTotal.Size = new System.Drawing.Size(129, 33);
          this.lblSubTotal.TabIndex = 12;
          this.lblSubTotal.Text = "0.00";
@@ -445,7 +444,7 @@ namespace TailwindPOS
          this.lblTotalTitle.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.lblTotalTitle.Location = new System.Drawing.Point(16, 128);
          this.lblTotalTitle.Name = "lblTotalTitle";
-         this.lblTotalTitle.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblTotalTitle.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblTotalTitle.Size = new System.Drawing.Size(97, 41);
          this.lblTotalTitle.TabIndex = 15;
          this.lblTotalTitle.Text = "Total:";
@@ -455,10 +454,11 @@ namespace TailwindPOS
          this.lblTaxTitle.AllowDrop = true;
          this.lblTaxTitle.BackColor = System.Drawing.Color.White;
          this.lblTaxTitle.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblTaxTitle.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblTaxTitle.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.lblTaxTitle.Location = new System.Drawing.Point(16, 80);
          this.lblTaxTitle.Name = "lblTaxTitle";
-         this.lblTaxTitle.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblTaxTitle.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblTaxTitle.Size = new System.Drawing.Size(81, 41);
          this.lblTaxTitle.TabIndex = 13;
          this.lblTaxTitle.Text = "Tax:";
@@ -468,10 +468,11 @@ namespace TailwindPOS
          this.lblSubTotalTitle.AllowDrop = true;
          this.lblSubTotalTitle.BackColor = System.Drawing.Color.White;
          this.lblSubTotalTitle.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblSubTotalTitle.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblSubTotalTitle.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.lblSubTotalTitle.Location = new System.Drawing.Point(16, 32);
          this.lblSubTotalTitle.Name = "lblSubTotalTitle";
-         this.lblSubTotalTitle.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblSubTotalTitle.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblSubTotalTitle.Size = new System.Drawing.Size(129, 33);
          this.lblSubTotalTitle.TabIndex = 11;
          this.lblSubTotalTitle.Text = "SubTotal:";
@@ -499,10 +500,11 @@ namespace TailwindPOS
          this.lblPOS.AllowDrop = true;
          this.lblPOS.BackColor = System.Drawing.Color.White;
          this.lblPOS.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblPOS.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblPOS.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.lblPOS.Location = new System.Drawing.Point(752, 768);
          this.lblPOS.Name = "lblPOS";
-         this.lblPOS.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblPOS.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblPOS.Size = new System.Drawing.Size(153, 49);
          this.lblPOS.TabIndex = 23;
          this.lblPOS.Text = "POSName";
@@ -512,10 +514,11 @@ namespace TailwindPOS
          this.lblPOSTitle.AllowDrop = true;
          this.lblPOSTitle.BackColor = System.Drawing.Color.White;
          this.lblPOSTitle.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblPOSTitle.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblPOSTitle.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.lblPOSTitle.Location = new System.Drawing.Point(752, 704);
          this.lblPOSTitle.Name = "lblPOSTitle";
-         this.lblPOSTitle.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblPOSTitle.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblPOSTitle.Size = new System.Drawing.Size(105, 57);
          this.lblPOSTitle.TabIndex = 22;
          this.lblPOSTitle.Text = "POS:";
@@ -525,10 +528,11 @@ namespace TailwindPOS
          this.lblCashier.AllowDrop = true;
          this.lblCashier.BackColor = System.Drawing.Color.White;
          this.lblCashier.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblCashier.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblCashier.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.lblCashier.Location = new System.Drawing.Point(960, 632);
          this.lblCashier.Name = "lblCashier";
-         this.lblCashier.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblCashier.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblCashier.Size = new System.Drawing.Size(185, 57);
          this.lblCashier.TabIndex = 20;
          this.lblCashier.Text = "CashierID";
@@ -538,10 +542,11 @@ namespace TailwindPOS
          this.lblCashierTitle.AllowDrop = true;
          this.lblCashierTitle.BackColor = System.Drawing.Color.White;
          this.lblCashierTitle.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblCashierTitle.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblCashierTitle.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.lblCashierTitle.Location = new System.Drawing.Point(752, 632);
          this.lblCashierTitle.Name = "lblCashierTitle";
-         this.lblCashierTitle.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblCashierTitle.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblCashierTitle.Size = new System.Drawing.Size(145, 49);
          this.lblCashierTitle.TabIndex = 19;
          this.lblCashierTitle.Text = "Cashier:";
@@ -549,7 +554,7 @@ namespace TailwindPOS
          // frmSales
          // 
          this.AllowDrop = true;
-         this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(18, 35);
+         this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(17, 34);
          this.Properties().AutoScaleMode = Stub._System.Windows.Forms.AutoScaleMode.Font;
          this.BackColor = System.Drawing.Color.White;
          this.ClientSize = new System.Drawing.Size(1202, 909);
@@ -578,7 +583,7 @@ namespace TailwindPOS
          this.MaximizeBox = false;
          this.MinimizeBox = false;
          this.Name = "frmSales";
-         this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Properties().ShowInTaskbar = false;
          this.Properties().StartPosition = Mobilize.Web.FormStartPosition.CenterScreen;
          this.Text = "Sales";
@@ -593,10 +598,13 @@ namespace TailwindPOS
          this.commandButtonHelper1.SetStyle(this.cbPayment, 1);
          this.Activated += new System.EventHandler(this.frmSales_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
+         this.Load += new System.EventHandler(this.Form_Load);
          this.gbCustomerInfo.ResumeLayout(false);
          this.frSubTotals.ResumeLayout(false);
          this.ResumeLayout(false);
       }
-      #endregion
+#endregion
+
    }
+
 }

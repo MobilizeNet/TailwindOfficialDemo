@@ -3,8 +3,9 @@ using Mobilize.Web.Extensions;
 
 namespace TailwindPOS
 {
-	partial class frmGiftCardCode
-	{
+
+   partial class frmGiftCardCode
+   {
 
 #region "Upgrade Support "
       [Intercepted]
@@ -15,33 +16,26 @@ namespace TailwindPOS
 
       public static frmGiftCardCode DefInstance
       {
-      	get
-      	{
-      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
-      		{
-      			m_InitializingDefInstance = true;
-      			m_vb6FormDefInstance = CreateInstance();
-      			m_InitializingDefInstance = false;
-      		}
-      		return m_vb6FormDefInstance;
-      	}
-      	set
-      	{
-      		m_vb6FormDefInstance = value;
-      	}
+         get
+         {
+            if ( m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed )
+            {
+               m_InitializingDefInstance = true;
+               m_vb6FormDefInstance = new frmGiftCardCode();
+               m_InitializingDefInstance = false;
+            }
+            return m_vb6FormDefInstance;
+         }
+         set
+         {
+            m_vb6FormDefInstance = value;
+         }
       }
+#endregion
 
-      #endregion
-      #region "Windows Form Designer generated code "
-
-      public static frmGiftCardCode CreateInstance()
-      {
-      	frmGiftCardCode theInstance = new frmGiftCardCode();
-      	return theInstance;
-      }
-
+#region "Windows Form Designer generated code "
       [Intercepted]
-      private string[] visualControls { get; set; } = new string[]{"components", "ToolTipMain", "cbCancel", "cbOK", "txtCode", "lblMessage", "commandButtonHelper1"};
+      private string[] visualControls { get; set; } = new string[] { "components", "ToolTipMain", "cbCancel", "cbOK", "txtCode", "lblMessage", "commandButtonHelper1" };
 
       //Required by the Windows Form Designer
       [Intercepted]
@@ -63,34 +57,34 @@ namespace TailwindPOS
       public Mobilize.Web.Label lblMessage { get; set; }
 
       [Intercepted]
-      public Stub._UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1 { get; set; }
+      public Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1 { get; set; }
+
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
-
       [System.Diagnostics.DebuggerStepThrough()]
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new Mobilize.Web.ControlCollection();
-      	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGiftCardCode));
-      	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
-      	this.cbCancel = new Mobilize.Web.Button();
-      	this.cbOK = new Mobilize.Web.Button();
-      	this.txtCode = new Mobilize.Web.TextBox();
-      	this.lblMessage = new Mobilize.Web.Label();
-      	this.SuspendLayout();
-      	this.commandButtonHelper1 = new Stub._UpgradeHelpers.Gui.CommandButtonHelper(this.components);
-      	// 
-      	// cbCancel
-      	// 
-      	this.cbCancel.AllowDrop = true;
-      	this.cbCancel.BackColor = System.Drawing.Color.White;
-      	this.cbCancel.Font = new Mobilize.Web.Font("Brandon Grotesque Light", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
+         this.components = new Mobilize.Web.ControlCollection();
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGiftCardCode));
+         this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
+         this.cbCancel = new Mobilize.Web.Button();
+         this.cbOK = new Mobilize.Web.Button();
+         this.txtCode = new Mobilize.Web.TextBox();
+         this.lblMessage = new Mobilize.Web.Label();
+         this.SuspendLayout();
+         this.commandButtonHelper1 = new Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
+         // 
+         // cbCancel
+         // 
+         this.cbCancel.AllowDrop = true;
+         this.cbCancel.BackColor = System.Drawing.Color.White;
+         this.cbCancel.Font = new Mobilize.Web.Font("Brandon Grotesque Light", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cbCancel.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbCancel.Location = new System.Drawing.Point(360, 128);
          this.cbCancel.Name = "cbCancel";
-         this.cbCancel.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbCancel.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbCancel.Size = new System.Drawing.Size(265, 65);
          this.cbCancel.TabIndex = 3;
          this.cbCancel.Text = "Cancel";
@@ -106,7 +100,7 @@ namespace TailwindPOS
          this.cbOK.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbOK.Location = new System.Drawing.Point(72, 128);
          this.cbOK.Name = "cbOK";
-         this.cbOK.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbOK.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbOK.Size = new System.Drawing.Size(265, 65);
          this.cbOK.TabIndex = 2;
          this.cbOK.Text = "OK";
@@ -126,7 +120,7 @@ namespace TailwindPOS
          this.txtCode.Location = new System.Drawing.Point(24, 72);
          this.txtCode.MaxLength = 0;
          this.txtCode.Name = "txtCode";
-         this.txtCode.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtCode.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtCode.Size = new System.Drawing.Size(633, 49);
          this.txtCode.TabIndex = 1;
          // 
@@ -139,7 +133,7 @@ namespace TailwindPOS
          this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(47, 75, 102);
          this.lblMessage.Location = new System.Drawing.Point(40, 24);
          this.lblMessage.Name = "lblMessage";
-         this.lblMessage.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblMessage.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblMessage.Size = new System.Drawing.Size(313, 41);
          this.lblMessage.TabIndex = 0;
          this.lblMessage.Text = "Enter GIFT CARD CODE";
@@ -147,7 +141,7 @@ namespace TailwindPOS
          // frmGiftCardCode
          // 
          this.AllowDrop = true;
-         this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(18, 35);
+         this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(17, 33);
          this.Properties().AutoScaleMode = Stub._System.Windows.Forms.AutoScaleMode.Font;
          this.BackColor = System.Drawing.Color.White;
          this.ClientSize = new System.Drawing.Size(688, 213);
@@ -163,7 +157,7 @@ namespace TailwindPOS
          this.MaximizeBox = false;
          this.MinimizeBox = false;
          this.Name = "frmGiftCardCode";
-         this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Properties().ShowInTaskbar = false;
          this.Text = "Enter Gift Card Code";
          this.commandButtonHelper1.SetStyle(this.cbCancel, 1);
@@ -172,6 +166,8 @@ namespace TailwindPOS
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.ResumeLayout(false);
       }
-      #endregion
+#endregion
+
    }
+
 }

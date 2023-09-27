@@ -9,8 +9,6 @@ namespace TailwindPOS
    {
 
       [Intercepted]
-
-
       public int Line { get; set; } = 0;
 
       [Intercepted]
@@ -26,4 +24,5 @@ namespace TailwindPOS
       public string Description { get; set; } = "";
 
    }
+
 }

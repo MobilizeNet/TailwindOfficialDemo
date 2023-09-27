@@ -13,6 +13,7 @@
 }
 .TailwindPOS_frmSales .lblCashierTitle {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 752px;
     top: 632px;
@@ -24,6 +25,7 @@
 }
 .TailwindPOS_frmSales .lblCashier {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 960px;
     top: 632px;
@@ -35,6 +37,7 @@
 }
 .TailwindPOS_frmSales .lblPOSTitle {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 752px;
     top: 704px;
@@ -46,6 +49,7 @@
 }
 .TailwindPOS_frmSales .lblPOS {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 752px;
     top: 768px;
@@ -76,6 +80,7 @@
 }
 .TailwindPOS_frmSales .lblSubTotalTitle {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 16px;
     top: 32px;
@@ -87,6 +92,7 @@
 }
 .TailwindPOS_frmSales .lblTaxTitle {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 16px;
     top: 80px;
@@ -110,6 +116,7 @@
 }
 .TailwindPOS_frmSales .lblSubTotal {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 168px;
     top: 32px;
@@ -121,6 +128,7 @@
 }
 .TailwindPOS_frmSales .lblTax {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 168px;
     top: 80px;
@@ -144,6 +152,7 @@
 }
 .TailwindPOS_frmSales .cbPayment {
     background-color: #00C000;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 360px;
     top: 688px;

@@ -16,6 +16,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
+[assembly: AssemblyMetadata("VersionFileDescription","")]
 [assembly: AssemblyCulture("")]
 
 // Version information for an assembly consists of the following four values:

@@ -25,6 +25,7 @@
 }
 .TailwindPOS_frmPayment .lblRemaining {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 832px;
     top: 56px;
@@ -60,6 +61,7 @@
 }
 .TailwindPOS_frmPayment .lblChange {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 832px;
     top: 152px;
@@ -83,6 +85,7 @@
 }
 .TailwindPOS_frmPayment .cb_Cancel {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 928px;
     top: 568px;
@@ -105,6 +108,7 @@
 }
 .TailwindPOS_frmPayment .cbFinishPayment {
     background-color: #612C43;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 624px;
     top: 568px;
@@ -135,6 +139,7 @@
 }
 .TailwindPOS_frmPayment .cbGiftCard {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 368px;
     top: 320px;
@@ -148,6 +153,7 @@
 }
 .TailwindPOS_frmPayment .cbCheck {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 368px;
     top: 232px;
@@ -161,6 +167,7 @@
 }
 .TailwindPOS_frmPayment .cbCreditCard {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 368px;
     top: 144px;
@@ -174,6 +181,7 @@
 }
 .TailwindPOS_frmPayment .cbCash {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 368px;
     top: 56px;

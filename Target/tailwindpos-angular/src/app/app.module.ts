@@ -16,7 +16,7 @@ import { TailwindPOSModule } from './tailwind-pos.module';
     WebMapModule,
     TailwindPOSModule,
   ],
-  providers: [WebMapService  ],
+  providers: [WebMapService],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

@@ -9,7 +9,6 @@ namespace TailwindPOS
    {
 
       [Intercepted]
-
       public int POSID { get; set; } = 0;
 
       [Intercepted]
@@ -25,4 +24,5 @@ namespace TailwindPOS
       public string Phone { get; set; } = "";
 
    }
+
 }

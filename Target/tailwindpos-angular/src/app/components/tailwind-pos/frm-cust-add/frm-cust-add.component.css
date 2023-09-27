@@ -145,6 +145,7 @@
 }
 .TailwindPOS_frmCustAdd .txtFirstName {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 184px;
     top: 16px;
@@ -154,6 +155,7 @@
 }
 .TailwindPOS_frmCustAdd .txtLastName {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 728px;
     top: 16px;
@@ -163,6 +165,7 @@
 }
 .TailwindPOS_frmCustAdd .txtEmail {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 184px;
     top: 80px;
@@ -172,6 +175,7 @@
 }
 .TailwindPOS_frmCustAdd .txtCompany {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 184px;
     top: 144px;
@@ -181,6 +185,7 @@
 }
 .TailwindPOS_frmCustAdd .txtStreetAddress1 {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 256px;
     top: 288px;
@@ -190,6 +195,7 @@
 }
 .TailwindPOS_frmCustAdd .txtStreetAddress2 {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 256px;
     top: 360px;
@@ -199,6 +205,7 @@
 }
 .TailwindPOS_frmCustAdd .txtCity {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 424px;
     top: 432px;
@@ -208,6 +215,7 @@
 }
 .TailwindPOS_frmCustAdd .txtState {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 120px;
     top: 432px;
@@ -217,6 +225,7 @@
 }
 .TailwindPOS_frmCustAdd .txtZipCode {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 856px;
     top: 432px;
@@ -226,6 +235,7 @@
 }
 .TailwindPOS_frmCustAdd .txtCounty {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 176px;
     top: 520px;
@@ -235,6 +245,7 @@
 }
 .TailwindPOS_frmCustAdd .txtPhone {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 184px;
     top: 216px;
@@ -244,6 +255,7 @@
 }
 .TailwindPOS_frmCustAdd .cbSave {
     background-color: #612C43;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 64px;
     top: 624px;
@@ -257,6 +269,7 @@
 }
 .TailwindPOS_frmCustAdd .cbClose {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 488px;
     top: 624px;

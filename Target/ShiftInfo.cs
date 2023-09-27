@@ -9,7 +9,6 @@ namespace TailwindPOS
    {
 
       [Intercepted]
-
       public System.DateTime StartTime { get; set; } = DateTime.FromOADate(0);
 
       [Intercepted]
@@ -22,4 +21,5 @@ namespace TailwindPOS
       public int ShiftID { get; set; } = 0;
 
    }
+
 }

@@ -3,8 +3,9 @@ using Mobilize.Web.Extensions;
 
 namespace TailwindPOS
 {
-	partial class frmCustAdd
-	{
+
+   partial class frmCustAdd
+   {
 
 #region "Upgrade Support "
       [Intercepted]
@@ -15,33 +16,26 @@ namespace TailwindPOS
 
       public static frmCustAdd DefInstance
       {
-      	get
-      	{
-      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
-      		{
-      			m_InitializingDefInstance = true;
-      			m_vb6FormDefInstance = CreateInstance();
-      			m_InitializingDefInstance = false;
-      		}
-      		return m_vb6FormDefInstance;
-      	}
-      	set
-      	{
-      		m_vb6FormDefInstance = value;
-      	}
+         get
+         {
+            if ( m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed )
+            {
+               m_InitializingDefInstance = true;
+               m_vb6FormDefInstance = new frmCustAdd();
+               m_InitializingDefInstance = false;
+            }
+            return m_vb6FormDefInstance;
+         }
+         set
+         {
+            m_vb6FormDefInstance = value;
+         }
       }
+#endregion
 
-      #endregion
-      #region "Windows Form Designer generated code "
-
-      public static frmCustAdd CreateInstance()
-      {
-      	frmCustAdd theInstance = new frmCustAdd();
-      	return theInstance;
-      }
-
+#region "Windows Form Designer generated code "
       [Intercepted]
-      private string[] visualControls { get; set; } = new string[]{"components", "ToolTipMain", "cbClose", "cbSave", "txtPhone", "txtCounty", "txtZipCode", "txtState", "txtCity", "txtStreetAddress2", "txtStreetAddress1", "txtCompany", "txtEmail", "txtLastName", "txtFirstName", "lblCompany", "lblCounty", "lblCity", "lblState", "lblZipCode", "lblStreetAdress2", "lblStreetAddress1", "lblPhone", "lblEmail", "lblLastName", "lblFirstName", "commandButtonHelper1"};
+      private string[] visualControls { get; set; } = new string[] { "components", "ToolTipMain", "cbClose", "cbSave", "txtPhone", "txtCounty", "txtZipCode", "txtState", "txtCity", "txtStreetAddress2", "txtStreetAddress1", "txtCompany", "txtEmail", "txtLastName", "txtFirstName", "lblCompany", "lblCounty", "lblCity", "lblState", "lblZipCode", "lblStreetAdress2", "lblStreetAddress1", "lblPhone", "lblEmail", "lblLastName", "lblFirstName", "commandButtonHelper1" };
 
       //Required by the Windows Form Designer
       [Intercepted]
@@ -123,53 +117,54 @@ namespace TailwindPOS
       public Mobilize.Web.Label lblFirstName { get; set; }
 
       [Intercepted]
-      public Stub._UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1 { get; set; }
+      public Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1 { get; set; }
+
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
-
       [System.Diagnostics.DebuggerStepThrough()]
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new Mobilize.Web.ControlCollection();
-      	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustAdd));
-      	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
-      	this.cbClose = new Mobilize.Web.Button();
-      	this.cbSave = new Mobilize.Web.Button();
-      	this.txtPhone = new Mobilize.Web.TextBox();
-      	this.txtCounty = new Mobilize.Web.TextBox();
-      	this.txtZipCode = new Mobilize.Web.TextBox();
-      	this.txtState = new Mobilize.Web.TextBox();
-      	this.txtCity = new Mobilize.Web.TextBox();
-      	this.txtStreetAddress2 = new Mobilize.Web.TextBox();
-      	this.txtStreetAddress1 = new Mobilize.Web.TextBox();
-      	this.txtCompany = new Mobilize.Web.TextBox();
-      	this.txtEmail = new Mobilize.Web.TextBox();
-      	this.txtLastName = new Mobilize.Web.TextBox();
-      	this.txtFirstName = new Mobilize.Web.TextBox();
-      	this.lblCompany = new Mobilize.Web.Label();
-      	this.lblCounty = new Mobilize.Web.Label();
-      	this.lblCity = new Mobilize.Web.Label();
-      	this.lblState = new Mobilize.Web.Label();
-      	this.lblZipCode = new Mobilize.Web.Label();
-      	this.lblStreetAdress2 = new Mobilize.Web.Label();
-      	this.lblStreetAddress1 = new Mobilize.Web.Label();
-      	this.lblPhone = new Mobilize.Web.Label();
-      	this.lblEmail = new Mobilize.Web.Label();
-      	this.lblLastName = new Mobilize.Web.Label();
-      	this.lblFirstName = new Mobilize.Web.Label();
-      	this.SuspendLayout();
-      	this.commandButtonHelper1 = new Stub._UpgradeHelpers.Gui.CommandButtonHelper(this.components);
-      	// 
-      	// cbClose
-      	// 
-      	this.cbClose.AllowDrop = true;
-      	this.cbClose.BackColor = System.Drawing.Color.White;
-      	this.cbClose.ForeColor = Mobilize.Web.SystemColors.ControlText;
+         this.components = new Mobilize.Web.ControlCollection();
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustAdd));
+         this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
+         this.cbClose = new Mobilize.Web.Button();
+         this.cbSave = new Mobilize.Web.Button();
+         this.txtPhone = new Mobilize.Web.TextBox();
+         this.txtCounty = new Mobilize.Web.TextBox();
+         this.txtZipCode = new Mobilize.Web.TextBox();
+         this.txtState = new Mobilize.Web.TextBox();
+         this.txtCity = new Mobilize.Web.TextBox();
+         this.txtStreetAddress2 = new Mobilize.Web.TextBox();
+         this.txtStreetAddress1 = new Mobilize.Web.TextBox();
+         this.txtCompany = new Mobilize.Web.TextBox();
+         this.txtEmail = new Mobilize.Web.TextBox();
+         this.txtLastName = new Mobilize.Web.TextBox();
+         this.txtFirstName = new Mobilize.Web.TextBox();
+         this.lblCompany = new Mobilize.Web.Label();
+         this.lblCounty = new Mobilize.Web.Label();
+         this.lblCity = new Mobilize.Web.Label();
+         this.lblState = new Mobilize.Web.Label();
+         this.lblZipCode = new Mobilize.Web.Label();
+         this.lblStreetAdress2 = new Mobilize.Web.Label();
+         this.lblStreetAddress1 = new Mobilize.Web.Label();
+         this.lblPhone = new Mobilize.Web.Label();
+         this.lblEmail = new Mobilize.Web.Label();
+         this.lblLastName = new Mobilize.Web.Label();
+         this.lblFirstName = new Mobilize.Web.Label();
+         this.SuspendLayout();
+         this.commandButtonHelper1 = new Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
+         // 
+         // cbClose
+         // 
+         this.cbClose.AllowDrop = true;
+         this.cbClose.BackColor = System.Drawing.Color.White;
+         this.cbClose.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
+         this.cbClose.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbClose.Location = new System.Drawing.Point(488, 624);
          this.cbClose.Name = "cbClose";
-         this.cbClose.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbClose.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbClose.Size = new System.Drawing.Size(417, 65);
          this.cbClose.TabIndex = 23;
          this.cbClose.Text = "Close";
@@ -181,10 +176,11 @@ namespace TailwindPOS
          // 
          this.cbSave.AllowDrop = true;
          this.cbSave.BackColor = System.Drawing.Color.FromArgb(97, 44, 67);
+         this.cbSave.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cbSave.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cbSave.Location = new System.Drawing.Point(64, 624);
          this.cbSave.Name = "cbSave";
-         this.cbSave.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cbSave.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cbSave.Size = new System.Drawing.Size(401, 65);
          this.cbSave.TabIndex = 22;
          this.cbSave.Text = "Save";
@@ -199,11 +195,12 @@ namespace TailwindPOS
          this.txtPhone.BackColor = System.Drawing.Color.White;
          this.txtPhone.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtPhone.Properties().Cursor = null;
+         this.txtPhone.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtPhone.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtPhone.Location = new System.Drawing.Point(184, 216);
          this.txtPhone.MaxLength = 0;
          this.txtPhone.Name = "txtPhone";
-         this.txtPhone.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtPhone.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtPhone.Size = new System.Drawing.Size(305, 65);
          this.txtPhone.TabIndex = 9;
          // 
@@ -214,11 +211,12 @@ namespace TailwindPOS
          this.txtCounty.BackColor = System.Drawing.Color.White;
          this.txtCounty.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtCounty.Properties().Cursor = null;
+         this.txtCounty.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtCounty.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtCounty.Location = new System.Drawing.Point(176, 520);
          this.txtCounty.MaxLength = 0;
          this.txtCounty.Name = "txtCounty";
-         this.txtCounty.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtCounty.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtCounty.Size = new System.Drawing.Size(353, 65);
          this.txtCounty.TabIndex = 21;
          // 
@@ -229,11 +227,12 @@ namespace TailwindPOS
          this.txtZipCode.BackColor = System.Drawing.Color.White;
          this.txtZipCode.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtZipCode.Properties().Cursor = null;
+         this.txtZipCode.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtZipCode.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtZipCode.Location = new System.Drawing.Point(856, 432);
          this.txtZipCode.MaxLength = 0;
          this.txtZipCode.Name = "txtZipCode";
-         this.txtZipCode.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtZipCode.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtZipCode.Size = new System.Drawing.Size(225, 65);
          this.txtZipCode.TabIndex = 19;
          // 
@@ -244,11 +243,12 @@ namespace TailwindPOS
          this.txtState.BackColor = System.Drawing.Color.White;
          this.txtState.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtState.Properties().Cursor = null;
+         this.txtState.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtState.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtState.Location = new System.Drawing.Point(120, 432);
          this.txtState.MaxLength = 0;
          this.txtState.Name = "txtState";
-         this.txtState.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtState.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtState.Size = new System.Drawing.Size(209, 57);
          this.txtState.TabIndex = 15;
          // 
@@ -259,11 +259,12 @@ namespace TailwindPOS
          this.txtCity.BackColor = System.Drawing.Color.White;
          this.txtCity.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtCity.Properties().Cursor = null;
+         this.txtCity.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtCity.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtCity.Location = new System.Drawing.Point(424, 432);
          this.txtCity.MaxLength = 0;
          this.txtCity.Name = "txtCity";
-         this.txtCity.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtCity.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtCity.Size = new System.Drawing.Size(289, 57);
          this.txtCity.TabIndex = 17;
          // 
@@ -274,11 +275,12 @@ namespace TailwindPOS
          this.txtStreetAddress2.BackColor = System.Drawing.Color.White;
          this.txtStreetAddress2.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtStreetAddress2.Properties().Cursor = null;
+         this.txtStreetAddress2.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtStreetAddress2.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtStreetAddress2.Location = new System.Drawing.Point(256, 360);
          this.txtStreetAddress2.MaxLength = 0;
          this.txtStreetAddress2.Name = "txtStreetAddress2";
-         this.txtStreetAddress2.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtStreetAddress2.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtStreetAddress2.Size = new System.Drawing.Size(937, 57);
          this.txtStreetAddress2.TabIndex = 13;
          // 
@@ -289,11 +291,12 @@ namespace TailwindPOS
          this.txtStreetAddress1.BackColor = System.Drawing.Color.White;
          this.txtStreetAddress1.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtStreetAddress1.Properties().Cursor = null;
+         this.txtStreetAddress1.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtStreetAddress1.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtStreetAddress1.Location = new System.Drawing.Point(256, 288);
          this.txtStreetAddress1.MaxLength = 0;
          this.txtStreetAddress1.Name = "txtStreetAddress1";
-         this.txtStreetAddress1.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtStreetAddress1.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtStreetAddress1.Size = new System.Drawing.Size(937, 65);
          this.txtStreetAddress1.TabIndex = 11;
          // 
@@ -304,11 +307,12 @@ namespace TailwindPOS
          this.txtCompany.BackColor = System.Drawing.Color.White;
          this.txtCompany.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtCompany.Properties().Cursor = null;
+         this.txtCompany.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtCompany.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtCompany.Location = new System.Drawing.Point(184, 144);
          this.txtCompany.MaxLength = 0;
          this.txtCompany.Name = "txtCompany";
-         this.txtCompany.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtCompany.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtCompany.Size = new System.Drawing.Size(857, 65);
          this.txtCompany.TabIndex = 7;
          // 
@@ -319,11 +323,12 @@ namespace TailwindPOS
          this.txtEmail.BackColor = System.Drawing.Color.White;
          this.txtEmail.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtEmail.Properties().Cursor = null;
+         this.txtEmail.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtEmail.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtEmail.Location = new System.Drawing.Point(184, 80);
          this.txtEmail.MaxLength = 0;
          this.txtEmail.Name = "txtEmail";
-         this.txtEmail.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtEmail.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtEmail.Size = new System.Drawing.Size(857, 57);
          this.txtEmail.TabIndex = 5;
          // 
@@ -334,11 +339,12 @@ namespace TailwindPOS
          this.txtLastName.BackColor = System.Drawing.Color.White;
          this.txtLastName.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtLastName.Properties().Cursor = null;
+         this.txtLastName.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtLastName.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtLastName.Location = new System.Drawing.Point(728, 16);
          this.txtLastName.MaxLength = 0;
          this.txtLastName.Name = "txtLastName";
-         this.txtLastName.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtLastName.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtLastName.Size = new System.Drawing.Size(361, 57);
          this.txtLastName.TabIndex = 3;
          // 
@@ -349,11 +355,12 @@ namespace TailwindPOS
          this.txtFirstName.BackColor = System.Drawing.Color.White;
          this.txtFirstName.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtFirstName.Properties().Cursor = null;
+         this.txtFirstName.Font = new Mobilize.Web.Font("Arial", 21.75f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtFirstName.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtFirstName.Location = new System.Drawing.Point(184, 16);
          this.txtFirstName.MaxLength = 0;
          this.txtFirstName.Name = "txtFirstName";
-         this.txtFirstName.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtFirstName.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtFirstName.Size = new System.Drawing.Size(337, 57);
          this.txtFirstName.TabIndex = 1;
          // 
@@ -366,7 +373,7 @@ namespace TailwindPOS
          this.lblCompany.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblCompany.Location = new System.Drawing.Point(40, 144);
          this.lblCompany.Name = "lblCompany";
-         this.lblCompany.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblCompany.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblCompany.Size = new System.Drawing.Size(145, 65);
          this.lblCompany.TabIndex = 6;
          this.lblCompany.Text = "Company:";
@@ -380,7 +387,7 @@ namespace TailwindPOS
          this.lblCounty.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblCounty.Location = new System.Drawing.Point(40, 520);
          this.lblCounty.Name = "lblCounty";
-         this.lblCounty.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblCounty.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblCounty.Size = new System.Drawing.Size(217, 65);
          this.lblCounty.TabIndex = 20;
          this.lblCounty.Text = "Country:";
@@ -394,7 +401,7 @@ namespace TailwindPOS
          this.lblCity.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblCity.Location = new System.Drawing.Point(344, 432);
          this.lblCity.Name = "lblCity";
-         this.lblCity.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblCity.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblCity.Size = new System.Drawing.Size(217, 65);
          this.lblCity.TabIndex = 16;
          this.lblCity.Text = "City:";
@@ -408,7 +415,7 @@ namespace TailwindPOS
          this.lblState.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblState.Location = new System.Drawing.Point(40, 432);
          this.lblState.Name = "lblState";
-         this.lblState.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblState.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblState.Size = new System.Drawing.Size(225, 81);
          this.lblState.TabIndex = 14;
          this.lblState.Text = "State:";
@@ -422,7 +429,7 @@ namespace TailwindPOS
          this.lblZipCode.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblZipCode.Location = new System.Drawing.Point(736, 432);
          this.lblZipCode.Name = "lblZipCode";
-         this.lblZipCode.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblZipCode.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblZipCode.Size = new System.Drawing.Size(233, 73);
          this.lblZipCode.TabIndex = 18;
          this.lblZipCode.Text = "Zip Code:";
@@ -436,7 +443,7 @@ namespace TailwindPOS
          this.lblStreetAdress2.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblStreetAdress2.Location = new System.Drawing.Point(40, 360);
          this.lblStreetAdress2.Name = "lblStreetAdress2";
-         this.lblStreetAdress2.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblStreetAdress2.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblStreetAdress2.Size = new System.Drawing.Size(233, 73);
          this.lblStreetAdress2.TabIndex = 12;
          this.lblStreetAdress2.Text = "Street Address 2:";
@@ -450,7 +457,7 @@ namespace TailwindPOS
          this.lblStreetAddress1.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblStreetAddress1.Location = new System.Drawing.Point(40, 288);
          this.lblStreetAddress1.Name = "lblStreetAddress1";
-         this.lblStreetAddress1.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblStreetAddress1.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblStreetAddress1.Size = new System.Drawing.Size(233, 57);
          this.lblStreetAddress1.TabIndex = 10;
          this.lblStreetAddress1.Text = "Street Address:";
@@ -464,7 +471,7 @@ namespace TailwindPOS
          this.lblPhone.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblPhone.Location = new System.Drawing.Point(40, 216);
          this.lblPhone.Name = "lblPhone";
-         this.lblPhone.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblPhone.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblPhone.Size = new System.Drawing.Size(185, 57);
          this.lblPhone.TabIndex = 8;
          this.lblPhone.Text = "Phone:";
@@ -478,7 +485,7 @@ namespace TailwindPOS
          this.lblEmail.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblEmail.Location = new System.Drawing.Point(40, 80);
          this.lblEmail.Name = "lblEmail";
-         this.lblEmail.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblEmail.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblEmail.Size = new System.Drawing.Size(185, 57);
          this.lblEmail.TabIndex = 4;
          this.lblEmail.Text = "Email:";
@@ -492,7 +499,7 @@ namespace TailwindPOS
          this.lblLastName.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblLastName.Location = new System.Drawing.Point(576, 16);
          this.lblLastName.Name = "lblLastName";
-         this.lblLastName.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblLastName.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblLastName.Size = new System.Drawing.Size(185, 57);
          this.lblLastName.TabIndex = 2;
          this.lblLastName.Text = "Last Name:";
@@ -506,7 +513,7 @@ namespace TailwindPOS
          this.lblFirstName.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblFirstName.Location = new System.Drawing.Point(40, 16);
          this.lblFirstName.Name = "lblFirstName";
-         this.lblFirstName.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblFirstName.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblFirstName.Size = new System.Drawing.Size(201, 49);
          this.lblFirstName.TabIndex = 0;
          this.lblFirstName.Text = "First Name:";
@@ -514,7 +521,7 @@ namespace TailwindPOS
          // frmCustAdd
          // 
          this.AllowDrop = true;
-         this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(18, 35);
+         this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(17, 33);
          this.Properties().AutoScaleMode = Stub._System.Windows.Forms.AutoScaleMode.Font;
          this.BackColor = System.Drawing.Color.White;
          this.ClientSize = new System.Drawing.Size(1264, 693);
@@ -547,7 +554,7 @@ namespace TailwindPOS
          this.MaximizeBox = true;
          this.MinimizeBox = true;
          this.Name = "frmCustAdd";
-         this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Properties().StartPosition = Mobilize.Web.FormStartPosition.CenterScreen;
          this.Text = "Register New Customer";
          this.commandButtonHelper1.SetStyle(this.cbClose, 1);
@@ -556,6 +563,8 @@ namespace TailwindPOS
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.ResumeLayout(false);
       }
-      #endregion
+#endregion
+
    }
+
 }

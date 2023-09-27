@@ -15,23 +15,23 @@ namespace TailwindPOS
       : Mobilize.Web.Form
    {
 
-   	public frmSales()
-   		: base()
-   	{
-   		if (m_vb6FormDefInstance is null)
-   		{
-   			if (m_InitializingDefInstance)
-   			{
-   				m_vb6FormDefInstance = this;
-   			}
-   			else
-   			{
-   				try
-   				{
-   					//For the start-up form, the first instance created is the default instance.
-   					if (!(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
+      public frmSales()
+      : base()
+      {
+         if ( m_vb6FormDefInstance is null )
+         {
+            if ( m_InitializingDefInstance )
+            {
+               m_vb6FormDefInstance = this;
+            }
+            else
+            {
+               try
+               {
+                  //For the start-up form, the first instance created is the default instance.
+                  if ( !(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType() )
                   {
-                  	m_vb6FormDefInstance = this;
+                     m_vb6FormDefInstance = this;
                   }
                }
                catch
@@ -43,12 +43,11 @@ namespace TailwindPOS
          InitializeComponent();
       }
 
-
       private void frmSales_Activated(System.Object eventSender, System.EventArgs eventArgs)
       {
-         if ( Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+         if ( Stub._UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm != eventSender )
          {
-            Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (Mobilize.Web.Form) eventSender;
+            Stub._UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm = (Mobilize.Web.Form)eventSender;
          }
       }
 
@@ -62,7 +61,6 @@ namespace TailwindPOS
       string m_CurrentDescription { get; set; } = "";
 
       [Intercepted]
-
       decimal m_Taxes { get; set; } = 0;
 
       [Intercepted]
@@ -76,45 +74,38 @@ namespace TailwindPOS
 
       public string LastReceipt
       {
-      	get
-      	{
-      		return m_lastReceipt;
-      	}
+         get
+         {
+            return m_lastReceipt;
+         }
       }
-
 
       public void AddLine(string Code, string Description, decimal price)
       {
-         (
-         fgItems.RowsCount)++;
+         (fgItems.RowsCount)++;
          int lastRow = fgItems.RowsCount - 1;
          // Quantity
-         fgItems
-            .SetCellValue( 0, lastRow, "1");
+         fgItems.SetCellValue(0, lastRow, "1");
          // Item ID
-         fgItems
-            .SetCellValue( 1, lastRow, Code);
+         fgItems.SetCellValue(1, lastRow, Code);
          // Description
-         fgItems
-            .SetCellValue( 2, lastRow, Description);
+         fgItems.SetCellValue(2, lastRow, Description);
          // Price
-         fgItems
-            .SetCellValue( 3, lastRow, price.ToString());
+         fgItems.SetCellValue(3, lastRow, price.ToString());
          // Total
-         fgItems
-            .SetCellValue( 4, lastRow, price.ToString());
+         fgItems.SetCellValue(4, lastRow, price.ToString());
          UpdateTotals();
       }
 
       private void cbAddCustomer_Click(Object eventSender, EventArgs eventArgs)
       {
-         frmCustAdd custAdd = frmCustAdd.CreateInstance();
+         frmCustAdd custAdd = new frmCustAdd();
          custAdd.ShowDialog();
-         if (custAdd.SavedCustomer)
+         if ( custAdd.SavedCustomer )
          {
-         	// Saves the current customer ID and updates its info on the sales screen
-         	m_CurrentCustomer = (custAdd.SavedCustomerID) ? -1 : 0;
-         	LoadCustomerInfo(m_CurrentCustomer);
+            // Saves the current customer ID and updates its info on the sales screen
+            m_CurrentCustomer = (custAdd.SavedCustomerID) ? -1 : 0;
+            LoadCustomerInfo(m_CurrentCustomer);
          }
       }
 
@@ -125,28 +116,28 @@ namespace TailwindPOS
 
       private void cbCustomerSearch_Click(Object eventSender, EventArgs eventArgs)
       {
-         frmSearchCust custSearch = frmSearchCust.CreateInstance();
+         frmSearchCust custSearch = new frmSearchCust();
          custSearch.ShowDialog();
-         if (custSearch.ChosenCustomer > 0)
+         if ( custSearch.ChosenCustomer > 0 )
          {
-         	// Saves the current customer ID and updates its info on the sales screen
-         	m_CurrentCustomer = custSearch.ChosenCustomer;
-         	LoadCustomerInfo(m_CurrentCustomer);
+            // Saves the current customer ID and updates its info on the sales screen
+            m_CurrentCustomer = custSearch.ChosenCustomer;
+            LoadCustomerInfo(m_CurrentCustomer);
          }
       }
 
       private void cbLogOff_Click(Object eventSender, EventArgs eventArgs)
       {
-         Mobilize.Web.DialogResult result = (Mobilize.Web.DialogResult) 0;
+         Mobilize.Web.DialogResult result = (Mobilize.Web.DialogResult)0;
          frmCashCount cash = null;
-         if (MainModule.IsShiftStarted())
+         if ( MainModule.IsShiftStarted() )
          {
-         	result = Mobilize.Web.MessageBox.Show("Are you ready to end your shift", AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()), Mobilize.Web.MessageBoxButtons.YesNo);
-            if (result == Mobilize.Web.DialogResult.Yes)
+            result = Mobilize.Web.MessageBox.Show("Are you ready to end your shift", AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()), Mobilize.Web.MessageBoxButtons.YesNo);
+            if ( result == Mobilize.Web.DialogResult.Yes )
             {
-            	cash = frmCashCount.CreateInstance();
-            	cash.ShowDialog();
-            	this.Hide();
+               cash = new frmCashCount();
+               cash.ShowDialog();
+               this.Hide();
             }
          }
       }
@@ -154,34 +145,32 @@ namespace TailwindPOS
       private void cbPayment_Click(Object eventSender, EventArgs eventArgs)
       {
          OrderedDictionary payments = null;
-         frmPayment pay = frmPayment.CreateInstance();
+         frmPayment pay = new frmPayment();
          pay.TransactionAmount = m_total;
          pay.UpdateTotals();
          // We need a ticket number
          // Because it will be needed when sending it to
          // credit card processor
-         if (MainModule.CurrentTicketID == 0)
+         if ( MainModule.CurrentTicketID == 0 )
          {
-         	MainModule.CurrentTicketID = MainModule.CreateTicket(m_CurrentCustomer, MainModule.CurrentPOS.POSID, MainModule.CurrentShift.UserID);
+            MainModule.CurrentTicketID = MainModule.CreateTicket(m_CurrentCustomer, MainModule.CurrentPOS.POSID, MainModule.CurrentShift.UserID);
          }
          OrderedDictionary items = GetItems();
-         if (items.Count > 0)
+         if ( items.Count > 0 )
          {
-         	pay.ShowDialog();
-         	if (pay.PaymentDone)
-         	{
-
-         		payments = pay.GetPayments();
-         		if (MainModule.SaveSale(m_SubTotal, m_Taxes, m_total, payments, items, m_CurrentCustomer, MainModule.CurrentPOS.POSID, MainModule.CurrentShift.UserID))
-         		{
-         			Reset();
-         			UpdateTotals();
-         		}
-         		else
-         		{
+            pay.ShowDialog();
+            if ( pay.PaymentDone )
+            {
+               payments = pay.GetPayments();
+               if ( MainModule.SaveSale(m_SubTotal, m_Taxes, m_total, payments, items, m_CurrentCustomer, MainModule.CurrentPOS.POSID, MainModule.CurrentShift.UserID) )
+               {
+                  Reset();
+                  UpdateTotals();
+               }
+               else
+               {
                   Mobilize.Web.MessageBox.Show("Error saving sale", AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()));
                }
-
             }
          }
          else
@@ -202,31 +191,31 @@ namespace TailwindPOS
 
       private void cbVoidItem_Click(Object eventSender, EventArgs eventArgs)
       {
-      	// If we are not positioned on the header
-      	if (fgItems.RowSel >= 1)
-      	{
-      		TryToVoidItem(fgItems.CurrentRowIndex);
-      	}
+         // If we are not positioned on the header
+         if ( fgItems.RowSel >= 1 )
+         {
+            TryToVoidItem(fgItems.CurrentRowIndex);
+         }
       }
 
       private void cbVoidTransaction_Click(Object eventSender, EventArgs eventArgs)
       {
-      	if (ConfirmVoidSale())
-      	{
-      		VoidSale();
-      	}
+         if ( ConfirmVoidSale() )
+         {
+            VoidSale();
+         }
       }
 
       public bool ConfirmVoidItem(int itemRow)
       {
-      	bool result = false;
-         Mobilize.Web.DialogResult res = (Mobilize.Web.DialogResult) 0;
+         bool result = false;
+         Mobilize.Web.DialogResult res = (Mobilize.Web.DialogResult)0;
          string itemName = "";
          OrderedDictionary items = GetItems();
-         if (items.Count > 0)
+         if ( items.Count > 0 )
          {
-         	itemName = Convert.ToString(fgItems[itemRow, 2].Value);
-         	res = Mobilize.Web.MessageBox.Show("Are you sure you want remove line for " + itemName + "?", AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()), Mobilize.Web.MessageBoxButtons.YesNo);
+            itemName = Convert.ToString(fgItems[itemRow, 2].Value);
+            res = Mobilize.Web.MessageBox.Show("Are you sure you want remove line for " + itemName + "?", AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()), Mobilize.Web.MessageBoxButtons.YesNo);
             result = res == Mobilize.Web.DialogResult.Yes;
          }
          return result;
@@ -238,99 +227,93 @@ namespace TailwindPOS
          return result == Mobilize.Web.DialogResult.Yes;
       }
 
-
-
       private OrderedDictionary GetItems()
       {
-      	OrderedDictionary coll = new OrderedDictionary(System.StringComparer.OrdinalIgnoreCase);
-      	// Read info from grid
-      	int tempForEndVar = fgItems.RowsCount - 1;
-      	double qty = 0;
-      	decimal price = 0;
-      	int Code = 0;
-      	string Desc = "";
-      	TicketItem item = null;
-      	for (int i = 1; i <= tempForEndVar; i++)
-      	{
-      		// Quantity
-      		qty = Convert.ToInt32(Double.Parse(Convert.ToString(fgItems[i, 0].Value)));
-      		// Price
-      		price = Decimal.Parse(Convert.ToString(fgItems[i, 3].Value), NumberStyles.Currency | NumberStyles.AllowExponent);
-      		// Code
-      		Code = Convert.ToInt32(Decimal.Parse(Convert.ToString(fgItems[i, 1].Value), NumberStyles.Currency | NumberStyles.AllowExponent));
-      		// Description
-      		Desc = Convert.ToString(this.fgItems[i, 2].Value);
-
-      		// Create item info
-      		// and insert it into collection
-      		item = new TicketItem();
-      		item.Code = Code;
-      		item.Line = i;
-      		item.price = price;
-      		item.Units = Convert.ToInt32(qty);
-      		item.Description = Desc;
-      		coll.Add(Guid.NewGuid().ToString(), item);
-      	}
-      	return coll;
+         OrderedDictionary coll = new OrderedDictionary(System.StringComparer.OrdinalIgnoreCase);
+         // Read info from grid
+         int tempForEndVar = fgItems.RowsCount - 1;
+         double qty = 0;
+         decimal price = 0;
+         int Code = 0;
+         string Desc = "";
+         TicketItem item = null;
+         for ( int i = 1; i <= tempForEndVar; i++ )
+         {
+            // Quantity
+            qty = Convert.ToInt32(Double.Parse(Convert.ToString(fgItems[i, 0].Value)));
+            // Price
+            price = Decimal.Parse(Convert.ToString(fgItems[i, 3].Value), NumberStyles.Currency | NumberStyles.AllowExponent);
+            // Code
+            Code = Convert.ToInt32(Decimal.Parse(Convert.ToString(fgItems[i, 1].Value), NumberStyles.Currency | NumberStyles.AllowExponent));
+            // Description
+            Desc = Convert.ToString(this.fgItems[i, 2].Value);
+            // Create item info
+            // and insert it into collection
+            item = new TicketItem();
+            item.Code = Code;
+            item.Line = i;
+            item.price = price;
+            item.Units = Convert.ToInt32(qty);
+            item.Description = Desc;
+            coll.Add(Guid.NewGuid().ToString(), item);
+         }
+         return coll;
       }
 
       public void LoadCustomerInfo(int customerInfo)
       {
-      	string customer = MainModule.GetCustomerInfo(customerInfo);
-      	lblCustomerInfo.Text = customer;
+         string customer = MainModule.GetCustomerInfo(customerInfo);
+         lblCustomerInfo.Text = customer;
       }
 
       private void Pause()
       {
-      	frmPause Pause = frmPause.CreateInstance();
-      	Pause.ShowDialog();
+         frmPause Pause = new frmPause();
+         Pause.ShowDialog();
       }
-
 
       // Cleans up for a new sale
       public void Reset()
       {
-      	// Reset customer
-      	m_CurrentCustomer = -1;
-      	lblCustomerInfo.Text = "";
-      	// Clean TicketID
-      	MainModule.CurrentTicketID = 0;
-      	// Update POS Name
-      	lblPOS.Text = MainModule.CurrentPOS.POSName;
-      	// Update Cashier ID
-      	lblCashier.Text = MainModule.CurrentShift.UserID.ToString();
-      	// Reset KeyPas
-      	ucNumericKeyPad.ShowChars = true;
-      	ucNumericKeyPad.Value = "";
-
-      	// Reset Quantity Button
-      	m_Toggle_Quantity = false;
-      	cbQuantity.BackColor = Color.White;
-      	// Reset Items Grid
-      	this.fgItems.RowsCount = 1;
-      	this.fgItems.SetCellValue( 0, 0, " Qty");
-         this.fgItems.SetCellValue( 1, 0, " Item ID ");
-         this.fgItems.SetCellValue( 2, 0, " Description ");
-         this.fgItems.SetCellValue( 3, 0, " Price ");
-         this.fgItems.SetCellValue( 4, 0, " Total ");
+         // Reset customer
+         m_CurrentCustomer = -1;
+         lblCustomerInfo.Text = "";
+         // Clean TicketID
+         MainModule.CurrentTicketID = 0;
+         // Update POS Name
+         lblPOS.Text = MainModule.CurrentPOS.POSName;
+         // Update Cashier ID
+         lblCashier.Text = MainModule.CurrentShift.UserID.ToString();
+         // Reset KeyPas
+         ucNumericKeyPad.ShowChars = true;
+         ucNumericKeyPad.Value = "";
+         // Reset Quantity Button
+         m_Toggle_Quantity = false;
+         cbQuantity.BackColor = Color.White;
+         // Reset Items Grid
+         this.fgItems.RowsCount = 1;
+         this.fgItems.SetCellValue(0, 0, " Qty");
+         this.fgItems.SetCellValue(1, 0, " Item ID ");
+         this.fgItems.SetCellValue(2, 0, " Description ");
+         this.fgItems.SetCellValue(3, 0, " Price ");
+         this.fgItems.SetCellValue(4, 0, " Total ");
       }
 
-      //UPGRADE_NOTE: (7001) The following declaration (ReturnFromPause) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+      //UPGRADE_NOTE: (7001) The following declaration (ReturnFromPause) seems to be dead code More Information: https://docs.mobilize.net/vbuc/ewis#7001
       //private void ReturnFromPause()
       //{
-      	//Reset();
+      //Reset();
       //}
-
       public void SearchAndAddProduct(string productCode)
       {
-      	string ProductDescription = "";
-      	decimal ProductPrice = 0;
-      	if (productCode != "")
+         string ProductDescription = "";
+         decimal ProductPrice = 0;
+         if ( productCode != "" )
          {
-         	if (MainModule.FindProductByCode(productCode, Mobilize.Web.ReferenceExtensions.Ref(() => ProductDescription), Mobilize.Web.ReferenceExtensions.Ref(() => ProductPrice)))
+            if ( MainModule.FindProductByCode(productCode, ref ProductDescription, ref ProductPrice) )
             {
-            	// If product was found add line
-            	AddLine(productCode, ProductDescription, ProductPrice);
+               // If product was found add line
+               AddLine(productCode, ProductDescription, ProductPrice);
             }
          }
          // Clear keypad
@@ -341,7 +324,7 @@ namespace TailwindPOS
       // normal mode
       public void ToggleQuantity()
       {
-         if (m_Toggle_Quantity)
+         if ( m_Toggle_Quantity )
          {
             m_Toggle_Quantity = false;
             cbQuantity.BackColor = Color.White;
@@ -360,15 +343,14 @@ namespace TailwindPOS
 
       public void TryToVoidItem(int itemRow)
       {
-         if (ConfirmVoidItem(itemRow))
+         if ( ConfirmVoidItem(itemRow) )
          {
             VoidItem(itemRow);
          }
       }
 
-
-      //UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      private void Form_Load()
+      //UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load event and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
+      private void Form_Load(Object eventSender, EventArgs eventArgs)
       {
          Pause();
          MainModule.CurrentShift.UserID = MainModule.PRESET_TERMINALID;
@@ -384,13 +366,13 @@ namespace TailwindPOS
          decimal price = 0;
          decimal Total = 0;
          int qty = 0;
-         if (m_Toggle_Quantity)
+         if ( m_Toggle_Quantity )
          {
             newqty = Convert.ToInt32(Double.Parse(Text_Renamed));
-            if (fgItems.CurrentRowIndex >= 1)
+            if ( fgItems.CurrentRowIndex >= 1 )
             {
-            	// Update quantity
-            	this.fgItems.SetCellValue( 0, fgItems.CurrentRowIndex, newqty.ToString());
+               // Update quantity
+               this.fgItems.SetCellValue(0, fgItems.CurrentRowIndex, newqty.ToString());
                // Price
                price = Decimal.Parse(Convert.ToString(fgItems[fgItems.CurrentRowIndex, 3].Value), NumberStyles.Currency | NumberStyles.AllowExponent);
                Total += (qty * price);
@@ -400,7 +382,6 @@ namespace TailwindPOS
          else
          {
             SearchAndAddProduct(Text_Renamed);
-
          }
       }
 
@@ -410,21 +391,19 @@ namespace TailwindPOS
          int tempForEndVar = fgItems.RowsCount - 1;
          double qty = 0;
          decimal price = 0;
-         for (int i = 1; i <= tempForEndVar; i++)
+         for ( int i = 1; i <= tempForEndVar; i++ )
          {
             // Quantity
             qty = Convert.ToInt32(Double.Parse(Convert.ToString(fgItems[i, 0].Value)));
             // Price
             price = Decimal.Parse(Convert.ToString(fgItems[i, 3].Value), NumberStyles.Currency | NumberStyles.AllowExponent);
-            Total += ((decimal) (qty * ((double) price)));
+            Total += ((decimal)(qty * ((double)price)));
             // Total
-            fgItems
-               .SetCellValue( 4, i, Total.ToString());
+            fgItems.SetCellValue(4, i, Total.ToString());
          }
-
          m_SubTotal = Total;
-         m_Taxes = (decimal) (((double) Total) * 0.65d);
-         m_total = (decimal) (((double) Total) * 1.65d);
+         m_Taxes = (decimal)(((double)Total) * 0.65d);
+         m_total = (decimal)(((double)Total) * 1.65d);
          lblSubTotal.Text = m_SubTotal.ToString("C");
          lblTax.Text = m_Taxes.ToString("C");
          lblTotal.Text = m_total.ToString("C");
@@ -433,13 +412,13 @@ namespace TailwindPOS
       public void VoidItem(int itemRow)
       {
          // A flex grid does not allow removing the last non fixed row
-         if (fgItems.RowsCount == 2)
+         if ( fgItems.RowsCount == 2 )
          {
-         	fgItems.RowsCount = 1;
+            fgItems.RowsCount = 1;
          }
          else
          {
-         	fgItems.RemoveItem(itemRow);
+            fgItems.RemoveItem(itemRow);
          }
          UpdateTotals();
       }
@@ -451,9 +430,11 @@ namespace TailwindPOS
          UpdateTotals();
          return null;
       }
+
       private void Form_Closed(Object eventSender, EventArgs eventArgs)
       {
       }
 
    }
+
 }

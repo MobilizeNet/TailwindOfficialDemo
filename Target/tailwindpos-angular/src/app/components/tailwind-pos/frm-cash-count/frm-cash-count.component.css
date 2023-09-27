@@ -13,6 +13,7 @@
 }
 .TailwindPOS_frmCashCount .lblTotal {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 728px;
     top: 8px;
@@ -24,6 +25,7 @@
 }
 .TailwindPOS_frmCashCount .lblTotalTitle {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 568px;
     top: 8px;
@@ -167,6 +169,7 @@
 }
 .TailwindPOS_frmCashCount .lblMessage {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 8px;
     top: 8px;
@@ -185,6 +188,7 @@
 }
 .TailwindPOS_frmCashCount .cbClear {
     background-color: White;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 568px;
     top: 72px;
@@ -198,6 +202,7 @@
 }
 .TailwindPOS_frmCashCount .cbOK {
     background-color: #612C43;
+    font-size: 21.75pt;
     color: rgba(0, 0, 0, 1);
     left: 568px;
     top: 136px;
@@ -211,6 +216,7 @@
 }
 .TailwindPOS_frmCashCount .txtFifties {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 416px;
     top: 296px;
@@ -220,6 +226,7 @@
 }
 .TailwindPOS_frmCashCount .txtTwenties {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 416px;
     top: 240px;
@@ -229,6 +236,7 @@
 }
 .TailwindPOS_frmCashCount .txtHundreds {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 416px;
     top: 352px;
@@ -238,6 +246,7 @@
 }
 .TailwindPOS_frmCashCount .txtTens {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 416px;
     top: 184px;
@@ -247,6 +256,7 @@
 }
 .TailwindPOS_frmCashCount .txtFives {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 416px;
     top: 128px;
@@ -256,6 +266,7 @@
 }
 .TailwindPOS_frmCashCount .txtOnes {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 416px;
     top: 72px;
@@ -265,6 +276,7 @@
 }
 .TailwindPOS_frmCashCount .txtQuarters {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 160px;
     top: 240px;
@@ -274,6 +286,7 @@
 }
 .TailwindPOS_frmCashCount .txtDimes {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 160px;
     top: 184px;
@@ -283,6 +296,7 @@
 }
 .TailwindPOS_frmCashCount .txtNickels {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 160px;
     top: 128px;
@@ -292,6 +306,7 @@
 }
 .TailwindPOS_frmCashCount .txtPennies {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 160px;
     top: 72px;
@@ -301,6 +316,7 @@
 }
 .TailwindPOS_frmCashCount .txtHalfDollars {
     background-color: White;
+    font-size: 21.75pt;
     color: #2F4B66;
     left: 160px;
     top: 296px;
